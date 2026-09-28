@@ -1,0 +1,6 @@
+*.gz
+docs/build
+/.vscode
+*.aux
+*.log
+.venv

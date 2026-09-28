@@ -1,0 +1,42 @@
+/* Blocksatz nur im Inhaltsbereich, nicht in Navigation/Seitenleiste */
+.rst-content p,
+.rst-content li,
+.rst-content div {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Linke Navigationsleiste immer linksbuendig */
+.wy-nav-side,
+.wy-menu-vertical,
+.wy-menu-vertical li,
+.wy-menu-vertical a,
+.wy-menu-vertical p.caption {
+    text-align: left;
+    text-justify: auto;
+}
+
+h1, h2, h3, h4 {
+    text-align: left;
+}
+
+.center-figure {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.logo{
+    margin-right: 20px;
+}
+
+
+ #text-element{
+    position: absolute;
+    font-size: 12px;
+    top: 6px;
+    left: 450px;
+    z-index: 9999;
+ }
+
