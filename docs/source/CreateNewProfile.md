@@ -43,7 +43,7 @@ Die folgende Tabelle gibt einen Überblick über die Personalisierungsdaten der 
 
 | Feld | Musterkarte UB01 | Musterkarte UB02 | Musterkarte UB03 | Musterkarte UB04 | Musterkarte UB05 |
 |---|---|---|---|---|---|
-| Besonderheiten |  | Wohnort im Ausland, Mehrere Vornamen, Diakritische Zeichen | Mehrere Vor- und Nachnamen, Diakritische Zeichen | Unvollständiges Geburtsdatum, Adresse aus Quadratestadt | Wohnort im Ausland, Skandinavische Sonderzeichen |
+| Besonderheiten |  | Wohnort im Ausland, mehrere Vornamen, diakritische Zeichen | Mehrere Vor- und Nachnamen, diakritische Zeichen | Unvollständiges Geburtsdatum, Adresse aus Quadratestadt | Wohnort im Ausland, skandinavische Sonderzeichen |
 | Ausgebender Staat (Ländercode) | D | D | D | D | D |
 | Gültig von (nur informativ) | 2024-07-01 | 2024-07-01 | 2024-07-01 | 2024-07-01 | 2024-07-01 |
 | Gültig bis | 2034-06-30 | 2034-06-30 | 2034-06-30 | 2034-06-30 | 2034-06-30 |
@@ -66,8 +66,8 @@ Die folgende Tabelle gibt einen Überblick über die Personalisierungsdaten der 
 
 
 (chap:CreateNewProfil)= 
-### Erstellen eines eigenen Profiles 
-Zusätzlich zu den mitgelieferten Profilen innerhalb von PersoSim besteht die Möglichkeit, eigene Profile zu erstellen. Profile bestehen aus einem XML-File, das alle relevanten Informationen für die Simulation enthält. Damit der Anwender aber nicht im XML-File editieren muss, gibt es ein zusätzliches Werkzeug zum einfachen Editieren der Profile (siehe {numref}`fig-editor-masterfile`) Der Editor steht genauso wie der Simulator auf der Website zum Download bereit.
+### Erstellen eines eigenen Profils 
+Zusätzlich zu den mitgelieferten Profilen innerhalb von PersoSim besteht die Möglichkeit, eigene Profile zu erstellen. Profile bestehen aus einem XML-File, das alle relevanten Informationen für die Simulation enthält. Damit der Anwender aber nicht im XML-File editieren muss, gibt es ein zusätzliches Werkzeug zum einfachen Editieren der Profile (siehe {numref}`fig-editor-masterfile`). Der Editor steht genauso wie der Simulator auf der Website zum Download bereit.
 Die Oberfläche unterteilt sich in zwei Ansichten "Masterfile" und "eID". In der "Masterfile"-Ansicht werden die verfügbaren Passwörter sowie Schlüsselpaardaten für die sichere Verschlüsselung und Kommunikation angezeigt.
 
 
@@ -77,7 +77,7 @@ Die Oberfläche unterteilt sich in zwei Ansichten "Masterfile" und "eID". In der
 :figclass: center-figure
 :name: fig-editor-masterfile
 
-: PersoSim Editor - Oberfläche des Masterfile
+: PersoSim Editor - Oberfläche des Masterfiles
 ```
 <br>
 
@@ -94,7 +94,7 @@ In der Ansicht der "eID" werden alle verfügbaren Informationen auf der Chipkart
 <br>
 
 
-Unter den Signatur-Einstellungen kann der Anwender ein DS-Zertifikat inkl. DS-Schlüssel eintragen, um das neue Profil auch final zu signieren (siehe {numref}`fig-signature-settings`). Die dazu notwendigen Dateien EF.CardSecurity und EF.ChipSecurity werden dabei neu erstellt, um das Profil zu vervollständigen. Erstellt man ein Profil ’from the scratch’ kann man auch ein dazugehöriges EF.CardAccess erstellen lassen. Diese personalausweisspezifischen Dateien enthalten die Standardparameter für Kryptografie und Protokolle, die durch die BSI TR-03110 und BSI TR-03127 für den deutschen Personalausweis vorgegeben werden. EF.CardAccess, EF.CardSecurity und EF.ChipSecurity lassen sich nicht mit dem Editor neu generieren und nicht manuell bearbeiten.
+Unter den Signatur-Einstellungen kann der Anwender ein DS-Zertifikat inkl. DS-Schlüssel eintragen, um das neue Profil auch final zu signieren (siehe {numref}`fig-signature-settings`). Die dazu notwendigen Dateien EF.CardSecurity und EF.ChipSecurity werden dabei neu erstellt, um das Profil zu vervollständigen. Erstellt man ein Profil ‚from scratch‘, kann man auch ein dazugehöriges EF.CardAccess erstellen lassen. Diese personalausweisspezifischen Dateien enthalten die Standardparameter für Kryptografie und Protokolle, die durch die BSI TR-03110 und BSI TR-03127 für den deutschen Personalausweis vorgegeben werden. EF.CardAccess, EF.CardSecurity und EF.ChipSecurity lassen sich nicht mit dem Editor neu generieren und nicht manuell bearbeiten.
 
 ```{figure} ../figures/signature-settings.png
 :alt: Header
@@ -107,7 +107,7 @@ Unter den Signatur-Einstellungen kann der Anwender ein DS-Zertifikat inkl. DS-Sc
 <br>
 
 
-### Öffnen eines Profiles 
+### Öffnen eines Profils 
 Der Editor bietet außerdem die Möglichkeit, ein bereits vorhandenes, selbsterstelltes Profil zu laden. Dazu wählen Sie im Reiter „File“ den Punkt „Open“ und öffnen die gewünschte Datei (siehe {numref}`fig-open-new-profil`). 
 ```{figure} ../figures/load-profil.png
 :alt: Header

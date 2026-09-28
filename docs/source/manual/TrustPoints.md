@@ -1,15 +1,15 @@
 # Trust Point für Terminal Authentication
 
 ## Anpassungen von TA Trust Points innerhalb einer bestehenden Personalisierung
-PersoSim erlaubt es dem Benutzer im Rahmen seiner Tests verschiedene Personalisierungen zu verwenden. Zu diesem Zweck stellt PersoSim bereits mehrere Standardprofile mit Personalisierungen bereit, die ein breites Spektrum an Möglichkeiten hierfür abdecken. Neben gewöhnlichen Personalisierungen wie sie auf der überwiegenden Mehrheit ausgegebener Personalausweise vorzufinden sind, finden sich in den Profilen auch solche, die weniger häufig anzutreffende aber nichtsdestotrotz zulässige Sonderfälle sowie deren Kombinationen abdecken. Eine genaue Liste der angebotenen Profile und ggf. ihrer Besonderheiten findet sich im Kapitel [Profile](#profile). Jedes einzelne dieser Profile enthält eine zulässige Personalisierung. Eine vollständige und erfolgreiche Verifikation der Profile ist jedoch aufgrund abweichender Signaturen nur innerhalb der Test-PKI möglich.
+PersoSim erlaubt es dem Benutzer, im Rahmen seiner Tests verschiedene Personalisierungen zu verwenden. Zu diesem Zweck stellt PersoSim bereits mehrere Standardprofile mit Personalisierungen bereit, die ein breites Spektrum an Möglichkeiten hierfür abdecken. Neben gewöhnlichen Personalisierungen, wie sie auf der überwiegenden Mehrheit ausgegebener Personalausweise vorzufinden sind, finden sich in den Profilen auch solche, die weniger häufig anzutreffende, aber nichtsdestotrotz zulässige Sonderfälle sowie deren Kombinationen abdecken. Eine genaue Liste der angebotenen Profile und ggf. ihrer Besonderheiten findet sich im Kapitel [Profile](#profile). Jedes einzelne dieser Profile enthält eine zulässige Personalisierung. Eine vollständige und erfolgreiche Verifikation der Profile ist jedoch aufgrund abweichender Signaturen nur innerhalb der Test-PKI möglich.
 
 Um den Austausch und Transfer von Profilen zu vereinfachen, kommen hierfür im Umfeld von PersoSim XML-Dateien zum Einsatz. Dieses Format stellt auch den einfachsten und bevorzugten Weg dar, um Änderungen an den Profilen vorzunehmen.
 
-Diese Anleitung beschreibt, wie sich speziell Trust Points innerhalb einer bestehenden Personalisierung für die Terminal Authentication ändern lassen. Als Trust Points werden im Folgenden alle, einen bestimmten Terminaltyp (AT, IS, ST) authentifizierenden, Zertifikate bezeichnet. Die Menge dieser Trust Points in Bezug auf einen bestimmten Terminaltyp selbst wird hingegen als Trust Anchor bezeichnet.
+Diese Anleitung beschreibt, wie sich speziell Trust Points innerhalb einer bestehenden Personalisierung für die Terminal Authentication ändern lassen. Als Trust Points werden im Folgenden alle einen bestimmten Terminaltyp (AT, IS, ST) authentifizierenden Zertifikate bezeichnet. Die Menge dieser Trust Points in Bezug auf einen bestimmten Terminaltyp selbst wird hingegen als Trust Anchor bezeichnet.
 
-Im Folgenden ist beschrieben, wie sich grundsätzlich Änderungen an Profilen vornehmen lassen insbesondere aber die an Trust Points.
+Im Folgenden ist beschrieben, wie sich grundsätzlich Änderungen an Profilen vornehmen lassen, insbesondere aber die an Trust Points.
 
-Ausgangspunkt für alle Änderungen ist jeweils eine XML-Datei zu einem bestehenden Standard- Profil. Im Folgenden wird hierfür beispielhaft das Profil 1 verwendet. Dieses enthält bereits einen TA Trust Anchor für ein AT Terminal, in dem ein einziger Trust Point abgelegt ist.
+Ausgangspunkt für alle Änderungen ist jeweils eine XML-Datei zu einem bestehenden Standardprofil. Im Folgenden wird hierfür beispielhaft das Profil 1 verwendet. Dieses enthält bereits einen TA Trust Anchor für ein AT-Terminal, in dem ein einziger Trust Point abgelegt ist.
 
 Der Trust Anchor wird durch das Element **`TrustPointCardObject`**
 
@@ -112,7 +112,7 @@ Unterhalb des Trust Anchors befindet sich der einzige und derzeitig gültige Tru
 
 ## Ändern eines bestehenden Trust Points
 Das vorhandene Trust Point Element **`currentCertificate`** soll nun so abgeändert werden, dass es den Trust Point aus DECVCAeIDCT00001.bin enthält passend zu DECVCAeIDCT00001.cvcert.
-Hierfür muss der Trust Point aus DECVCAeIDCT00001.bin zuerst z.B. mit Hilfe eines Hex- Editors in eine hexadezimale Repräsentation überführt werden.
+Hierfür muss der Trust Point aus DECVCAeIDCT00001.bin zuerst z.B. mit Hilfe eines Hex-Editors in eine hexadezimale Repräsentation überführt werden.
 Der hexadezimal kodierte Trust Point sieht aus wie folgt:
 
 ```python
@@ -129,7 +129,7 @@ Gültigkeitsbeginn:
         </certificateEffective>)
 ```
 
-Abblaufdatum:
+Ablaufdatum:
 ```python
     (<certificateExpiration 
         id="92"> 2015-05-10 22:00:00.0 UTC
@@ -223,7 +223,7 @@ Für den Fall, dass ein Trust Point nicht geändert, sondern neu bzw. zusätzlic
 
 einfach in dieselbe Hierarchieebene kopieren und entsprechend der obigen Anleitung ändern.
 
-Die Reihenfolge, in der die Trust Points auf die Karte aufgebracht wurden, wird über den Namen des Elements festgelegt, in dem der TrustPoint abgelegt wird. Als Namen stehen hierbei **`currentCertificate`** sowie **`previousCertificate`** zur Verfügung. Der zuletzt hinzugefügte Trust Point wird als Element **`currentCertificate`** abgelegt während ein vorausgehender Trust Point als Element **`previousCertificate`** abgelegt wird. Dabei gilt zu beachten, dass innerhalb eines Trust Anchors lediglich zwei Trust Points, d.h. jeweils genau ein **`currentCertificate`** sowie ein **`previousCertificate`** abgelegt werden können.
+Die Reihenfolge, in der die Trust Points auf die Karte aufgebracht wurden, wird über den Namen des Elements festgelegt, in dem der Trust Point abgelegt wird. Als Namen stehen hierbei **`currentCertificate`** sowie **`previousCertificate`** zur Verfügung. Der zuletzt hinzugefügte Trust Point wird als Element **`currentCertificate`** abgelegt, während ein vorausgehender Trust Point als Element **`previousCertificate`** abgelegt wird. Dabei ist zu beachten, dass innerhalb eines Trust Anchors lediglich zwei Trust Points, d.h. jeweils genau ein **`currentCertificate`** sowie ein **`previousCertificate`** abgelegt werden können.
 
 ```python
     <de.persosim.simulator.cardobjects.TrustPointCardObject id="77">

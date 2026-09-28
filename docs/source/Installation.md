@@ -1,7 +1,7 @@
 # Installation
 Dieses Kapitel enthält die Dateien, die für den Betrieb des Simulators nötig sind, sowie eine kurze Anleitung zur Installation. Wir unterstützen neben Windows auch Linux und macOS für die stationäre Variante von PersoSim. Für ältere Smartphones mit NFC liegt ein Android-APK bereit.
 
-PersoSim ist auf den 64-Bit Betriebssystemen Windows, Linux und macOS lauffähig. 
+PersoSim ist auf den 64-Bit-Betriebssystemen Windows, Linux und macOS lauffähig. 
 
 ## Systemvoraussetzungen
 Java muss in Version 17 oder 21 installiert sein.  
@@ -11,7 +11,7 @@ Wir empfehlen entweder:
 
    oder 
 
-- das [OpenJDK](https://jdk.java.net/) bei dem die Einstellungen manuell durchgeführt werden können. 
+- das [OpenJDK](https://jdk.java.net/), bei dem die Einstellungen manuell durchgeführt werden können. 
 
 <img src="../figures/Java-logo.png" alt="Java-Logo" href="https://www.bsi.bund.de/DE/Home/home_node.html" width="35" class="logo">    
 <img src="../figures/adoptium-logo.png" alt="Adoptium-Logo" href="https://www.bsi.bund.de/DE/Home/home_node.html" width="100" class="logo">    
@@ -28,15 +28,15 @@ Das Vorgehen für die Installation des Treibers ist betriebssystemabhängig. Im 
 
 ### Windows
 Für die Installation von PersoSim wird lediglich als Betriebssystem Windows 10 oder neuer vorausgesetzt.
-Der Treiber erkennt selbständig, um welche Version von Windows es sich handelt und erkennt auch automatisch die Architektur (32 oder 64 Bit). Zur Installation des Treibers muss lediglich den Anweisungen des Installationsprogramms Folge geleistet werden. Im Gegensatz zu älteren Versionen des Treibers müssen keine Testzertifikate mehr separat installiert werden. Nach erfolgreicher Installation erscheint der virtuelle Kartenleser ähnlich wie physische Kartenleser als ”PersoSim Virtual Reader” im Gerätemanager unter Smartcard-Leser und kann genutzt werden.
+Der Treiber erkennt selbständig, um welche Version von Windows es sich handelt, und erkennt auch automatisch die Architektur (32 oder 64 Bit). Zur Installation des Treibers muss lediglich den Anweisungen des Installationsprogramms Folge geleistet werden. Im Gegensatz zu älteren Versionen des Treibers müssen keine Testzertifikate mehr separat installiert werden. Nach erfolgreicher Installation erscheint der virtuelle Kartenleser ähnlich wie physische Kartenleser als ”PersoSim Virtual Reader” im Gerätemanager unter Smartcard-Leser und kann genutzt werden.
 
-- Der Windows-Treiber enthält die notwendigen Dateien sowohl für Windows 10 bzw. 11 jeweils als Architektur mit 32 Bit oder 64 Bit. Das Installationspaket für Windows finden Sie hier: [PersoSim_Win_Driver_x64.zip](https://persosim.github.io/software/PersoSim_Win_Driver_x64.zip)
+- Der Windows-Treiber enthält die notwendigen Dateien sowohl für Windows 10 als auch für Windows 11, jeweils für die Architektur mit 32 Bit oder 64 Bit. Das Installationspaket für Windows finden Sie hier: [PersoSim_Win_Driver_x64.zip](https://persosim.github.io/software/PersoSim_Win_Driver_x64.zip)
 
 ### Linux
 Den Treiber für Linux und macOS müssen Sie derzeit selbst kompilieren. Die Sourcen finden Sie hier: [PersoSim_Driver_PCSCLite_20240917.tgz](https://persosim.github.io/software/PersoSim_Driver_PCSCLite_20240917.tgz)
 
 Die folgende Anleitung zur Installation des Treibers unter Linux wurde für Debian 13 erstellt und dort getestet. Sie ist aber grundsätzlich auch auf anderen Linux-Derivaten durchführbar.
-Zusätzlich zur Debian 13 Standardinstallation werden die folgenden Pakete benötigt:
+Zusätzlich zur Debian-13-Standardinstallation werden die folgenden Pakete benötigt:
 - pcscd
 - pcsc-tools
 - libpcsclite-dev
@@ -61,14 +61,14 @@ Das Laden des Treibers erfolgt mit dem Aufruf:
 ``` 
 
 
-Analog zu Installation lässt sich der Treiber mit dem folgenden Kommando deinstallieren:
+Analog zur Installation lässt sich der Treiber mit dem folgenden Kommando deinstallieren:
 
 ```python
    sudo make uninstall
 ``` 
 
    
-Alternativ zum virtuellen Kartenleser können Sie auch die Remote-IFD-Schnittstelle von PersoSim nutzen. Diese können Sie auch lokal einsetzen um mit PersoSim zu kommunizieren.
+Alternativ zum virtuellen Kartenleser können Sie auch die Remote-IFD-Schnittstelle von PersoSim nutzen. Diese können Sie auch lokal einsetzen, um mit PersoSim zu kommunizieren.
 
 ### macOS
 Um die notwendige Toolchain auf macOS bereitzustellen, muss Xcode installiert werden. Zusätzlich müssen die ”command line developer tools” installiert werden. Das genaue Vorgehen hängt von der genutzten macOS- und Xcode-Version ab. Für aktuelle Versionen sollte der Konsolenbefehl zu einem Dialog für die Installation der Kommandozeilenwerkzeuge führen:
@@ -77,7 +77,7 @@ Um die notwendige Toolchain auf macOS bereitzustellen, muss Xcode installiert we
    xcode-select --install
 ``` 
 
-Nach dem Entpacken des Archivs liegt der Treiber im Quellcode vor und muss zunächst kompiliert werden. Dies geschieht mit Hilfe des Aufrufs make im Verzeichnis des entpackten Archivs. Die anschließende Installation erfolgt mit dem Aufruf sudo make install. Nach einem Neustart wird der virtuelle Treiber von macOS erkannt und kann mit PersoSim genutzt werden. Die beiden Kommandos können folgendermaaßen kombiniert werden:
+Nach dem Entpacken des Archivs liegt der Treiber im Quellcode vor und muss zunächst kompiliert werden. Dies geschieht mit Hilfe des Aufrufs make im Verzeichnis des entpackten Archivs. Die anschließende Installation erfolgt mit dem Aufruf sudo make install. Nach einem Neustart wird der virtuelle Treiber von macOS erkannt und kann mit PersoSim genutzt werden. Die beiden Kommandos können folgendermaßen kombiniert werden:
 
 ```python
    make && sudo make install
@@ -87,10 +87,9 @@ Nach dem Entpacken des Archivs liegt der Treiber im Quellcode vor und muss zunä
 ## Start-Anleitung
 
 ### Simulator
-Die Hauptanwendung PersoSim enthält den Karten-Simulator und gleichzeitig den virtuellen Kartenleser der vom Treiber an das jeweilige Betriebssystem angebunden wird. Die Anwendung erfordert keine Installation im klassischen Sinne. Sie ist nach dem Entpacken der Zip-Datei bzw. des Tar-Balls sofort lauffähig.
+Die Hauptanwendung PersoSim enthält den Karten-Simulator und gleichzeitig den virtuellen Kartenleser, der vom Treiber an das jeweilige Betriebssystem angebunden wird. Die Anwendung erfordert keine Installation im klassischen Sinne. Sie ist nach dem Entpacken der Zip-Datei bzw. des Tar-Balls sofort lauffähig.
 
-Der Start erfolgt betriebssystemabhängig über die PersoSim.exe unter Windows bzw. PersoSim unter Linux oder macOS. Nach dem Start erscheint die jeweilige GUI wie in Abbildung 1.
-wie in (siehe {numref}`fig-gui` in [](chap:sim_gui)). 
+Der Start erfolgt betriebssystemabhängig über die PersoSim.exe unter Windows bzw. PersoSim unter Linux oder macOS. Nach dem Start erscheint die jeweilige GUI (siehe {numref}`fig-gui` in [](chap:sim_gui)).
 
 Je nach Anwendungsfall (z.B. bei einer Anbindung per Remote-IFD) kann der Simulator jetzt unmittelbar genutzt werden.
 
@@ -102,7 +101,7 @@ Starten Sie den Simulator (Eclipse RCP) für die jeweilige Plattform (Win, macOS
 
 ### Editor (optional)
 Der PersoSim Editor erlaubt das Modifizieren bestehender Profile oder auch die Erzeugung völlig neuer Personalisierungen für den Simulator. Damit können Karten mit beliebigen Inhalten simuliert werden.
-Die Installation des  PersoSim Editors isz keine Installation im klassischen Sinne. Installation und Start funktionieren durch Entpacken des Archivs und anschließendem Ausführen des enthaltenen Executables. Nach dem Start erscheint die GUI wie in (siehe {numref}`fig-editor-masterfile` in [](chap:CreateNewProfil)).
+Die Installation des PersoSim-Editors ist keine Installation im klassischen Sinne. Installation und Start funktionieren durch Entpacken des Archivs und anschließendes Ausführen des enthaltenen Executables. Nach dem Start erscheint die GUI (siehe {numref}`fig-editor-masterfile` in [](chap:CreateNewProfil)).
 
 <hr style="height: 2px; background: #00509B;">
 <br>

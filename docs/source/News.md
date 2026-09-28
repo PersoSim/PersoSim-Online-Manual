@@ -5,11 +5,11 @@ Die folgenden Neuigkeiten sind chronologisch sortiert und die neuesten Einträge
 ```{hint}
 Die neue Version 1.4 des Personalausweis-Simulators liefert die folgenden Features:
 
-- Terminal-Schnittstelle: Zur einfacheren Ansteuerung von PersoSim haben wir nun eine Remote-Schnittstelle integriert über die sich PersoSim fernsteuern lässt. Diese Schnittstelle soll den Einsatz für Continuous Integration (CI) erleichtern. Die unterstützten Kommandos werden im aktualisierten Anwenderhandbuch beschrieben.
-- Remote-IFD-Schnittstelle: der Kopplungscode kann weiterhin zufällig generiert werden bzw. frei gewählt werden. Allerdings ist der Kopplungscode von nun an beim Start auf ‚1234‘ eingestellt, was die Kopplung im Testkontext vereinfachen soll.
-- Logging: wir haben das Logging in PersoSim grundlegend überarbeitet, so dass der Anwender nun viele Möglichkeiten hat, das Logging für seine Bedürfnisse anzupassen. Nähere Infos dazu finden sich ebenfalls im aktualisierten Anwenderhandbuch.
+- Terminal-Schnittstelle: Zur einfacheren Ansteuerung von PersoSim haben wir nun eine Remote-Schnittstelle integriert, über die sich PersoSim fernsteuern lässt. Diese Schnittstelle soll den Einsatz für Continuous Integration (CI) erleichtern. Die unterstützten Kommandos werden im aktualisierten Anwenderhandbuch beschrieben.
+- Remote-IFD-Schnittstelle: Der Kopplungscode kann weiterhin zufällig generiert werden bzw. frei gewählt werden. Allerdings ist der Kopplungscode von nun an beim Start auf ‚1234‘ eingestellt, was die Kopplung im Testkontext vereinfachen soll.
+- Logging: Wir haben das Logging in PersoSim grundlegend überarbeitet, so dass der Anwender nun viele Möglichkeiten hat, das Logging für seine Bedürfnisse anzupassen. Nähere Infos dazu finden sich ebenfalls im aktualisierten Anwenderhandbuch.
 
-Wer sich wundert, wo die Version 1.3 geblieben ist: wir haben die Versionsnummerierung umgestellt, so dass gerade Versionsnummern (minor) nun immer die aktuellen Releases kenntlich machen. Ungerade Nummern stehen für Zwischenversionen, die wir bei Bedarf für Testzwecke bereitstellen.
+Wer sich wundert, wo die Version 1.3 geblieben ist: Wir haben die Versionsnummerierung umgestellt, so dass gerade Versionsnummern (minor) nun immer die aktuellen Releases kenntlich machen. Ungerade Nummern stehen für Zwischenversionen, die wir bei Bedarf für Testzwecke bereitstellen.
 
 ```
 <hr style="height: 2px; background: #00509B;">
@@ -41,7 +41,7 @@ Für die Installation des Windows-Treibers sind weiterhin Admin-Rechte notwendig
 ## PersoSim Version 1.1 veröffentlicht
 ```{hint}
 Zum Ende des Jahres haben wir nun die Version 1.1 von PersoSim veröffentlicht. In diesem Release gibt es zwei Änderungen:
-- Der Editor ermöglicht es nun dem Anwender die RI-Schlüssel selbst zu ändern oder neu generieren zu lassen. Darüber hinaus werden jetzt beim ersten Start von PersoSim die RI-Schlüssel für jedes Profil neu ausgewürfelt. Dies dient dazu, um Konflikte bei der Anmeldung auf Websites zu vermeiden.
+- Der Editor ermöglicht es nun dem Anwender, die RI-Schlüssel selbst zu ändern oder neu generieren zu lassen. Darüber hinaus werden jetzt beim ersten Start von PersoSim die RI-Schlüssel für jedes Profil neu ausgewürfelt. Dies dient dazu, Konflikte bei der Anmeldung auf Websites zu vermeiden.
 - Im Editor lassen sich nun Profile im JSON-Format exportieren, so dass die Profile zukünftig im Emulator der AusweisApp verwendet werden können. Informationen zum JSON-Format gibt es hier: [File system](https://www.ausweisapp.bund.de/sdk/simulator.html#filesystem).
 ```
 
@@ -54,7 +54,7 @@ Wir freuen uns, dass wir nun auch endlich wieder eine Version für macOS zur Ver
 
 ## PersoSim Version 1.0.0 veröffentlicht
 ```{hint}
-Wir freuen uns, dass wir nun Version 1.0.0 des PersoSim-Simulators und des -Editors veröffentlichen können. Zum Download stehen Version für Windows und Linux zur Verfügung. Die macOS-Version folgt demnächst. Die maßgeblichen Änderungen haben wir im Unterbau vorgenommen, so dass wir neue Änderungen zukünftig einfacher implementieren können. Dabei geht es um die folgenden Änderungen:
+Wir freuen uns, dass wir nun Version 1.0.0 des PersoSim-Simulators und des -Editors veröffentlichen können. Zum Download stehen Versionen für Windows und Linux zur Verfügung. Die macOS-Version folgt demnächst. Die maßgeblichen Änderungen haben wir im Unterbau vorgenommen, so dass wir neue Änderungen zukünftig einfacher implementieren können. Dabei geht es um die folgenden Änderungen:
 - PersoSim und der dazugehörige Editor basieren nun auf Java 17 bzw. 21 sowie auf Eclipse 2024/3
 - Der Editor signiert nun die Personalisierungsdaten mit ECDSA-256, ECDSA-384 oder ECDSA-512
 - Die Profile (nPA und UB) wurden aktualisiert und neu signiert
@@ -70,7 +70,7 @@ Im Rahmen der 19. Sitzung der DIF AG eID beim BSI in Bonn hatten wir die Gelegen
 
 ## Weiterentwicklung von PersoSim gestartet
 ```{hint}
-Aktuell sammeln wir neue Anforderungen für die Weiterentwicklung von PersoSim. Dazu sprechen wir mit unterschiedlichen Stakeholdern, sammeln neue Anforderungen, bewerten diese und sortieren sie ein um sie dann zu implementieren. Es wird also zukünftig wieder neue Releases geben. Neuigkeiten werden wir auch über unseren neuen Mastodon-Account bereitstellen: [mastodon.social/@persosim](https://mastodon.social/@persosim).
+Aktuell sammeln wir neue Anforderungen für die Weiterentwicklung von PersoSim. Dazu sprechen wir mit unterschiedlichen Stakeholdern, sammeln neue Anforderungen, bewerten diese und sortieren sie ein, um sie dann zu implementieren. Es wird also zukünftig wieder neue Releases geben. Neuigkeiten werden wir auch über unseren neuen Mastodon-Account bereitstellen: [mastodon.social/@persosim](https://mastodon.social/@persosim).
 ```
 
 
@@ -82,7 +82,7 @@ Der Simulator für den deutschen Personalausweis steht nun in Version 0.18.3 zur
 
 ## PersoSim jetzt auch auf der BSI-Website
 ```{hint}
-Das BSI hat auf seiner Website nun eine eigene [Seite](https://www.bsi.bund.de/PersoSim) für PersoSim angelegt. Dort gibt es alle Informationen zum Simulator und den dazugehörigen Tools in kompakter Form. Als Teil der eID-Infrastruktur ist PersoSim ein wichtiger Mosaikstein, um die Interoperabilität der Komponenten im deutschen eID-System sicherzustellen. Die Testinfrastruktur setzt sich zu diesem Zweck aus den einzelnen Komponenten der eID-Infrastruktur zusammen, um den Herstellern der einzelnen Komponenten Testmöglichkeiten sowie Testwerkzeuge an die Hand zu geben. Für darüberhinausgehende Tests – wie bspw. die Integration des Simulators in die bestehende Continuous Integration – stehen die Entwickler und Berater der secunet gerne zur Verfügung.
+Das BSI hat auf seiner Website nun eine eigene [Seite](https://www.bsi.bund.de/PersoSim) für PersoSim angelegt. Dort gibt es alle Informationen zum Simulator und den dazugehörigen Tools in kompakter Form. Als Teil der eID-Infrastruktur ist PersoSim ein wichtiger Mosaikstein, um die Interoperabilität der Komponenten im deutschen eID-System sicherzustellen. Die Testinfrastruktur setzt sich zu diesem Zweck aus den einzelnen Komponenten der eID-Infrastruktur zusammen, um den Herstellern der einzelnen Komponenten Testmöglichkeiten sowie Testwerkzeuge an die Hand zu geben. Für darüber hinausgehende Tests – wie bspw. die Integration des Simulators in die bestehende Continuous Integration – stehen die Entwickler und Berater der secunet gerne zur Verfügung.
 ```
 
 

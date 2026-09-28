@@ -33,7 +33,7 @@ Personalisierungen innerhalb von PersoSim lassen sich sowohl über die Kommandoz
 : Ausweissimulator PersoSim - Laden eines Profils
 ```
 
-**Laden von Personalisierungen über die Kommandozeile:** Auch auf der Kommandozeile lassen sich Personalisierungen einfach laden. Hierfür wird das Kommando loadperso<Dateiname> benutzt. Alternativ kann statt des Dateinamens auch eine Zahl angegeben werden, die als Abkürzung zu einem der angebotenen Standardprofile dient. Mehr Informationen zur Steuerung über die Kommandozeile finden sie hier [Controller](#controler).
+**Laden von Personalisierungen über die Kommandozeile:** Auch auf der Kommandozeile lassen sich Personalisierungen einfach laden. Hierfür wird das Kommando `loadperso <Dateiname>` benutzt. Alternativ kann statt des Dateinamens auch eine Zahl angegeben werden, die als Abkürzung zu einem der angebotenen Standardprofile dient. Mehr Informationen zur Steuerung über die Kommandozeile finden Sie hier [Controller](#controler).
 
 
 ### Wechseln des Lesertyps
@@ -63,7 +63,7 @@ auch der PersoSim-Basisleser lediglich über die beiden Infofelder im oberen Ber
 
 Standardleser verfügen über ein Display und eine Tastatur, über die z.B. Informationen gemäß BSI TR-03119 angezeigt und Passwörter eingegeben werden können. Entsprechend verfügt der PersoSim-Standardleser über ein Display, in dem Anweisungen und die eingegebene PIN angezeigt werden, sowie über ein Tastenfeld zur Eingabe der PIN. Unterhalb des Displays wird der zur Authentisierung übertragene CHAT angezeigt (wenn man mit der Maus darüber verweilt, werden die einzelnen Bits menschenlesbar aufgeschlüsselt).
 
-Zusätzlich erlaubt es der PersoSim-Standardleser im rechten Bereich häufig genutzte Passwörter zu speichern und per Doppelklick direkt zu nutzen. Gerade bei der Durchführung von mehreren Tests kann die Eingabe eines Passworts (PIN, CAN oder PUK) relativ zeitaufwendig werden. Aus diesem Grund gibt es die Möglichkeit, beliebige Ziffernfolgen als Passwörter vorab zu definieren. {numref}`fig-basisReader2` zeigt diese Funktion exemplarisch: Hier sind als Passwörter sowohl ’123456’ (voreingestellte PIN für PersoSim-Profile) als auch ’500540’ (voreingestellte CAN für PersoSim-Profile) hinterlegt. Die voreingestellte PUK ‘9876543210‘ könnte ebenfalls dort angegeben werden. Nach einem Rechtsklick auf „Passwords“ im rechten Bereich können Passwörter hinzugefügt, editiert oder gelöscht werden. Bei der Verwendung von PersoSim kann anschließend je nach Kontext das entsprechende Passwort per Doppelklick ausgewählt werden. Zur weiteren Vereinfachung dient die Aktivierung des automatischen Logins (AutoLogin). Wird diese Option nach Auswahl eines Passworts angehakt, wird dieses Passwort immer verwendet und muss nicht mehr per Doppelklick ausgewählt werden.
+Zusätzlich erlaubt es der PersoSim-Standardleser, im rechten Bereich häufig genutzte Passwörter zu speichern und per Doppelklick direkt zu nutzen. Gerade bei der Durchführung von mehreren Tests kann die Eingabe eines Passworts (PIN, CAN oder PUK) relativ zeitaufwendig werden. Aus diesem Grund gibt es die Möglichkeit, beliebige Ziffernfolgen als Passwörter vorab zu definieren. {numref}`fig-basisReader2` zeigt diese Funktion exemplarisch: Hier sind als Passwörter sowohl ’123456’ (voreingestellte PIN für PersoSim-Profile) als auch ’500540’ (voreingestellte CAN für PersoSim-Profile) hinterlegt. Die voreingestellte PUK ‘9876543210‘ könnte ebenfalls dort angegeben werden. Nach einem Rechtsklick auf „Passwords“ im rechten Bereich können Passwörter hinzugefügt, editiert oder gelöscht werden. Bei der Verwendung von PersoSim kann anschließend je nach Kontext das entsprechende Passwort per Doppelklick ausgewählt werden. Zur weiteren Vereinfachung dient die Aktivierung des automatischen Logins (AutoLogin). Wird diese Option nach Auswahl eines Passworts angehakt, wird dieses Passwort immer verwendet und muss nicht mehr per Doppelklick ausgewählt werden.
 
 ```{figure} ../figures/basicReader2.png
 :alt: Header
@@ -76,7 +76,7 @@ Zusätzlich erlaubt es der PersoSim-Standardleser im rechten Bereich häufig gen
 
 Beim ersten Programmstart wird automatisch der Standardleser aktiviert.
 
-Es gilt zu beachten, dass die Eingabeelemente auf dem PinPad des Standardlesers nur dann und solange aktiviert sind wie sie im Rahmen einer Kommunikation mit dem simulierten Ausweis benötigt werden. D.h. zu Programmstart sind diese zunächst ohne Funktion. Sobald eine Eingabe erforderlich ist, erscheint ein entsprechender Hinweis auf dem Display.
+Es gilt zu beachten, dass die Eingabeelemente auf dem PinPad des Standardlesers nur dann und nur so lange aktiviert sind, wie sie im Rahmen einer Kommunikation mit dem simulierten Ausweis benötigt werden. D.h. zu Programmstart sind diese zunächst ohne Funktion. Sobald eine Eingabe erforderlich ist, erscheint ein entsprechender Hinweis auf dem Display.
 
 
 ### Ansicht Logging und Konsole
