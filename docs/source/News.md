@@ -1,6 +1,24 @@
 # Neuigkeiten
 Die folgenden Neuigkeiten sind chronologisch sortiert und die neuesten Einträge stehen oben.
 
+## PersoSim 1.6 veröffentlicht mit Anbindung an Comprion CL Verify
+```{hint}
+In diesem Release haben wir als Hardware zur Kommunikation zwischen Simulator und Kartenleser den [Comprion CL Verify](https://www.comprion.com/products-solutions/products-solutions-a-z/cl-verify-a/) integriert. Dieses Gerät übernimmt die Kommunikation auf den unteren Layern und übersetzt die empfangenen Signale in eine APDU, die an PersoSim weitergeleitet werden. Dieser bearbeitet die APDU und schickt das Ergebnis zurück an den CL Verify, welcher es als R-APDU zurück an den Kartenleser gibt.
+
+Organisationen und Firmen, die bereits im Besitz eines CL Verify sind, können diesen mit Release 1.6 nun auch in Kombination mit PersoSim einsetzen.
+
+```
+<hr style="height: 2px; background: #00509B;">
+
+
+## Experimentelle Version veröffentlicht für Chameleon Mini
+```{hint}
+Zur Integration eines Chameleon Mini gibt es nun eine experimentelle Version 1.5.5 von PersoSim. Da die benötigten Protokolle was Feldstärke, Timing usw. zu anspruchsvoll für Chameleon Mini sind, steht diese Version nicht als offizielles Release zur Verfügung. Stattdessen kann es zu Testzwecken und als Basis für weitere Entwicklungen genutzt werden. Detailliertere Infos zur Nutzung gib es hier: [PersoSim und Chameleon Mini](https://persosim.github.io/chameleon_mini.html).
+```
+<hr style="height: 2px; background: #00509B;">
+
+
+
 ## PersoSim Version 1.4 veröffentlicht mit Remote-Schnittstelle und verbessertem Logging
 ```{hint}
 Die neue Version 1.4 des Personalausweis-Simulators liefert die folgenden Features:
