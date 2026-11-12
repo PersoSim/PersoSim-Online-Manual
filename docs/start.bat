@@ -1,5 +1,5 @@
 @ECHO OFF
-REM Batch-Datei zum Öffnen von build/html/index.html im Browser
+REM Batch file that opens build/html/index.html in the browser
 
 SET FILEPATH=%CD%\build\html\index.html
 

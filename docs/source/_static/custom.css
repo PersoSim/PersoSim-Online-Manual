@@ -1,4 +1,4 @@
-/* Blocksatz nur im Inhaltsbereich, nicht in Navigation/Seitenleiste */
+/* Justified text only in the content area, not in the navigation/sidebar */
 .rst-content p,
 .rst-content li,
 .rst-content div {
@@ -6,7 +6,15 @@
     text-justify: inter-word;
 }
 
-/* Linke Navigationsleiste immer linksbuendig */
+/* Version line below the project name in the sidebar header */
+.wy-side-nav-search > div.persosim-version {
+    margin-top: -0.2em;
+    margin-bottom: 0.8em;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 90%;
+}
+
+/* Left navigation sidebar always left-aligned */
 .wy-nav-side,
 .wy-menu-vertical,
 .wy-menu-vertical li,
@@ -27,16 +35,41 @@ h1, h2, h3, h4 {
     text-align: center;
 }
 
-.logo{
-    margin-right: 20px;
+/* Center all figures and their captions
+   (the caption is a p and would otherwise inherit the justified alignment) */
+.rst-content figure,
+.rst-content div.figure {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
+.rst-content figure img,
+.rst-content div.figure img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
- #text-element{
-    position: absolute;
-    font-size: 12px;
-    top: 6px;
-    left: 450px;
-    z-index: 9999;
- }
+.rst-content figure figcaption,
+.rst-content figure figcaption p,
+.rst-content div.figure p.caption {
+    text-align: center;
+}
 
+.rst-content img.align-default:not(.logo) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Logos (inline images) centered side by side */
+.rst-content div.logo-row,
+.rst-content div.logo-row p {
+    text-align: center;
+}
+
+.logo{
+    margin-left: 10px;
+    margin-right: 10px;
+}

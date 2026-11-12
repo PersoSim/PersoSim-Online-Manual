@@ -19,30 +19,32 @@ dargestellt. Dort werden detailliert die verfügbaren Kommandos beschrieben:
 
 ```
 PersoSimControllerc.exe <start|stop|restart> <fullPathToExecutable>
---> Start, stop or restart PersoSim.
-Example (Windows): PersoSimControllerc.exe start "C:\PersoSimDir\PersoSimc.exe"
-Example (Linux) : PersoSimController stop "/home/someuser/PersoSimDir/PersoSim"
-Example (MacOS) : cd /home/someuser/PersoSimDir/PersoSim.app/Contents/Eclipse;
-../MacOS/PersoSimController restart ../MacOS/PersoSim
+    --> Start, stop or restart PersoSim.
+    Example (Windows): PersoSimControllerc.exe start "C:\PersoSimDir\PersoSim.exe"
+    Example (Linux)  : PersoSimController stop "/home/someuser/PersoSimDir/PersoSim"
+    Example (MacOS)  : cd /home/someuser/PersoSimDir/PersoSim.app/Contents/Eclipse; ../MacOS/PersoSimController restart ../MacOS/PersoSim
 or:
-PersoSimControllerc.exe loadperso
-<absolutePathToPersoFile>|<nameOfPredefinedPersoTemplate>
---> Load a personalization file into PersoSim.
-Example (Absolute Path, Windows): PersoSimControllerc.exe loadperso
-"C:\\PersoSimDir\profiledir\Profile02.perso"
-Example (Perso Template) : PersoSimControllerc.exe loadperso Profile03.perso
+PersoSimControllerc.exe loadperso <absolutePathToPersoFile>|<nameOfPredefinedStandardProfile>
+    --> Load a personalization file into PersoSim.
+        A standard profile is named by its id, its file name (with or without '.perso'),
+        its personalization class or its profile number.
+    Example (Absolute Path, Windows): PersoSimControllerc.exe loadperso "C:\PersoSimDir\profiledir\nPA_02_A-MUSTERMANN.perso"
+    Example (Standard Profile)      : PersoSimControllerc.exe loadperso nPA_03_J-MUSTERMANN.perso
+    Example (by its id)             : PersoSimControllerc.exe loadperso nPA_03
 or:
 PersoSimControllerc.exe sendapdu <apduAsHexString>
---> Send an APDU in HEX String format to PersoSim.
-Example: PersoSimControllerc.exe sendapdu 0084000000
+    --> Send an APDU in HEX String format to PersoSim.
+    Example: PersoSimControllerc.exe sendapdu 0084000000
 or:
 PersoSimControllerc.exe reset
---> Reset PersoSim analogous to a Smartcard Reset.
+    --> Reset PersoSim analogous to a Smartcard Reset.
 or:
 PersoSimControllerc.exe help
---> Show this usage information.
+    --> Show this usage information.
 
 ```
+
+Ein mitgeliefertes Profil lässt sich beim Kommando LoadPerso über seine Kennung (z.B. nPA_03), seinen Dateinamen (mit oder ohne „.perso“) oder seine Nummer angeben. Ein per LoadPerso geladenes Profil zeigt PersoSim in der Profilauswahl so an, als wäre es in der Oberfläche ausgewählt worden. Eine laufende Simulation wird dabei beendet, und ungespeicherte Änderungen an einem Profil werden verworfen.
 
 Die SOAP-Schnittstelle von PersoSim kann auch direkt unabhängig vom PersoSim Controller
 verwendet werden. Die zugehörige WSDL kann in einem Standard-Browser aufgerufen werden. Die

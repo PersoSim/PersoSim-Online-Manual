@@ -13,7 +13,7 @@ Die Dokumentation stellt die wesentlichen Inhalte zur Verfügung:
    Intro
    News
    Using
-   CreateNewProfile
+   Profiles
    TechnicalDetailsManual
    Installation
    FAQ

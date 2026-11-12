@@ -1,0 +1,9 @@
+{% extends "!layout.html" %}
+
+{# Sidebar header: project name, then the documented PersoSim version, then the search box #}
+{%- block sidebartitle %}
+  {%- set _root_doc = root_doc|default(master_doc) %}
+  <a href="{{ pathto(_root_doc) }}" class="icon icon-home"> {{ project }}</a>
+  <div class="persosim-version">Version {{ release }}</div>
+  {%- include "searchbox.html" %}
+{%- endblock %}

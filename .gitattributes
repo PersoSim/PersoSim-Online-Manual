@@ -1,0 +1,6 @@
+# Windows batch files need CRLF, otherwise cmd.exe misreads them after "chcp 65001"
+*.bat text eol=crlf
+
+# Never treat images as text
+*.png binary
+*.jpg binary

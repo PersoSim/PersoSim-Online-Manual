@@ -6,30 +6,30 @@
 Entwickler sind selbstverständlich dazu eingeladen, die Open-Source-Software PersoSim weiterzuentwickeln bzw. in eigene Anwendungen zu integrieren.
 
 ### Wo findet man den Quellcode zum Simulator PersoSim?
-Wir unterscheiden zwischen der Anwender-Community hier auf dieser Website und der Entwickler-Community. Den Source Code zum Projekt PersoSim stellen wir deshalb auf GitHub bereit. Das Repository findet man hier: [github.com/PersoSim](https://github.com/persosim). Dort gibt es auch technische Informationen, die den Einstieg in den Source Code des Simulators erleichtern sollen.
+Es wird zwischen der Anwender-Community hier auf dieser Website und der Entwickler-Community unterschieden. Der Source Code zum Projekt PersoSim wird deshalb auf GitHub bereitgestellt. Das Repository findet man hier: [github.com/PersoSim](https://github.com/persosim). Dort gibt es auch technische Informationen, die den Einstieg in den Source Code des Simulators erleichtern sollen.
 
 ### Gibt es Trainings im Kontext PersoSim?
-Als secunet bieten wir Ihnen über den Support hier in der Community auch Trainings zum Thema PersoSim an. Wir bieten Ihnen ebenfalls Unterstützung bei der Integration von PersoSim in Ihren Entwicklungs- bzw. Testprozess an (Continuous Integration). Kontaktieren Sie uns dazu bitte über info@secunet.com.
+secunet bietet Ihnen über den Support hier in der Community auch Trainings zum Thema PersoSim an. Weiterhin wird auch Unterstützung bei der Integration von PersoSim in Ihren Entwicklungs- bzw. Testprozess angeboten (Continuous Integration). Kontaktieren Sie secunet dazu bitte über info@secunet.com.
 
 ### Gibt es Veröffentlichungen zum Thema PersoSim?
-Wir haben PersoSim auf unterschiedlichen Veranstaltungen wie dem BSI IT-Sicherheitskongress oder der Security Document World präsentiert. Darüber hinaus gibt es Veröffentlichungen zum Thema, z.B. in der Zeitschrift Datenschutz und Datensicherheit (DuD). Soweit verfügbar, finden Sie die Präsentationen und Artikel im Kapitel [Publikation](Publication.md).
+PersoSim wurde auf unterschiedlichen Veranstaltungen wie dem BSI IT-Sicherheitskongress oder der Security Document World präsentiert. Darüber hinaus gibt es Veröffentlichungen zum Thema, z.B. in der Zeitschrift Datenschutz und Datensicherheit (DuD). Soweit verfügbar, finden Sie die Präsentationen und Artikel im Kapitel [Publikation](Publication.md).
 
 
 ## Einsatz des Simulators
 ### Welche Betriebssysteme werden unterstützt?
-Wir haben Treiber für den virtuellen Kartenleser auf den Betriebssystemen Windows, Linux und macOS bereitgestellt. Der Simulator läuft ebenfalls auf diesen Betriebssystemen. Zusätzlich haben wir eine App für Android implementiert, die ebenfalls einen Personalausweis simuliert und die NFC-Schnittstelle nutzt.
+Es wurden Treiber für den virtuellen Kartenleser auf den Betriebssystemen Windows, Linux und macOS bereitgestellt. Der Simulator läuft ebenfalls auf diesen Betriebssystemen. Zusätzlich wurde eine App für Android implementiert, die ebenfalls einen Personalausweis simuliert und die NFC-Schnittstelle nutzt.
 
 ### Wie lauten die PIN und die CAN für die verwendeten Profile?
-Die Profile nutzen alle als PIN die 123456 und als CAN die 500540. Als PUK ist die 9876543210 personalisiert.
+Die Profile nutzen fast alle als PIN die 123456 (Ausnahme: nPA_02 mit der Transport-PIN 12345) und als CAN die 500540. Als PUK ist die 9876543210 personalisiert.
 
 ### Wird für den Simulator spezielle Hardware benötigt?
 Beim virtuellen Kartenleser handelt es sich um eine reine Softwarelösung, für die keine weitere Hardware benötigt wird. Dieser steht für die Betriebssysteme Windows, Linux und macOS bereit und dient als Verbindung zwischen Applikation und Simulator. Alternativ kann aber auch der SmartCardEmulator auf Android bzw. der CL Verify der Firma Comprion genutzt werden. Beide Varianten sind in PersoSim integriert.
 
 ### Welche Zertifikate werden für die mitgelieferten Profile verwendet und wo findet man diese?
-Im entpackten PersoSim-Verzeichnis finden Sie im Verzeichnis \plugins\de.persosim.simulator_XXX\personalization\gtCertificates die zugrundeliegenden AT-, IS- und ST-Zertifikate. Die Profile selbst werden mit einem Zertifikat der Test-PKI durch das BSI signiert.
+Im entpackten PersoSim-Verzeichnis finden Sie im Verzeichnis `\plugins\de.persosim.simulator_XXX\personalization\gtCertificates` die zugrundeliegenden AT-, IS- und ST-Zertifikate. Die Profile selbst werden mit einem Zertifikat der Test-PKI durch das BSI signiert.
 
 ### Wie kann man eigene Profile erstellen?
-Damit Sie nicht in den XML-Dateien editieren müssen, um eigene Profile zu erstellen, haben wir einen Editor implementiert. Dieser hilft Ihnen eigene Profile zu erstellen, die Sie dann im Simulator verwenden können. Der Editor steht im Kapitel [Vorgehensweise zur Installation](Installation.md) bereit.
+Damit Sie nicht in den XML-Dateien editieren müssen, um eigene Profile zu erstellen, lassen sich Profile seit Version 1.8 direkt in PersoSim bearbeiten; der frühere separate Editor ist in PersoSim integriert. Wählen Sie dazu in der Profilauswahl ein vorhandenes Profil, ändern Sie die Daten im Bereich „Retrieved Data“ und speichern Sie das Profil mit „Done“ unter neuem Namen. Die Vorgehensweise ist im Kapitel [Profile bearbeiten](#chap:profilesEdit) beschrieben.
 
 ### Wie kann man die Selbstauskunft in der AusweisApp mit PersoSim verwenden?
 Die AusweisApp kommuniziert von Haus aus mit einem für den Echtbetrieb ausgelegten eID-Server, der die Echtheit des simulierten Ausweises berechtigterweise anzweifelt. Um die simulierten Personalausweise auszulesen, gibt es zwei Möglichkeiten:
@@ -47,11 +47,11 @@ Die Firma adesso hat zwischenzeitlich im Rahmen des Projekts Fidelio aber eine s
 Alternativ zum virtuellen Kartenleser können Sie auch die Remote-IFD-Schnittstelle von PersoSim nutzen. Diese können Sie auch lokal einsetzen, um mit PersoSim zu kommunizieren.
 
 ### Wie kann man das Pseudonym für ein Profil ändern?
-Ab Version 0.15 kann man im Editor das Pseudonym für ein Profil ändern. Dazu werden im Profil der öffentliche und der geheime Schlüssel für Restricted Identification (RI) gespeichert. Sie können unter RI nun neue Schlüsselpaare automatisch generieren lassen.
+Das Pseudonym eines Profils ergibt sich aus den im Profil gespeicherten Schlüsselpaaren für Restricted Identification (RI). Aktivieren Sie in der Profilauswahl den „Expert Mode“. Im Abschnitt „RI Key Pairs“ lassen sich mit „Generate new key material“ neue Schlüsselpaare erzeugen, die mit „Done“ im Profil gespeichert werden (siehe [Expertenmodus](#chap:expertMode)).
 
 ### Warum wird unter macOS angezeigt, dass die PersoSim-Datei defekt sei?
 Nach dem Download einer Datei unter macOS in das Standard-Verzeichnis “Downloads” setzt macOS für diese Datei ein Quarantäne-Flag. Sobald dieses Flag gesetzt wird, kommt beim Start von PersoSim die Fehlermeldung, dass die Datei defekt sei und in den Mülleimer verschoben werden sollte. Man kann dieses Problem umgehen, indem man die PersoSim-Datei über einen anderen Weg als den Browser herunterlädt, z.B. über wget. Oder man entfernt nach dem Download das Quarantäne-Flag mit folgendem Kommando: 
-```python
+```bash
    sudo xattr -r -d com.apple.quarantine /path/to/de.persosim.rcp.product-x.x.x-202xxxxxx-macosx.cocoa.x86_64.tar.gz
 ``` 
 
