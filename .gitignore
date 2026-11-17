@@ -1,5 +1,6 @@
 *.gz
 docs/build
+docs/.obsidian
 /.vscode
 *.aux
 *.log

@@ -50,10 +50,8 @@ Alternativ zum virtuellen Kartenleser können Sie auch die Remote-IFD-Schnittste
 Das Pseudonym eines Profils ergibt sich aus den im Profil gespeicherten Schlüsselpaaren für Restricted Identification (RI). Aktivieren Sie in der Profilauswahl den „Expert Mode“. Im Abschnitt „RI Key Pairs“ lassen sich mit „Generate new key material“ neue Schlüsselpaare erzeugen, die mit „Done“ im Profil gespeichert werden (siehe [Expertenmodus](#chap:expertMode)).
 
 ### Warum wird unter macOS angezeigt, dass die PersoSim-Datei defekt sei?
-Nach dem Download einer Datei unter macOS in das Standard-Verzeichnis “Downloads” setzt macOS für diese Datei ein Quarantäne-Flag. Sobald dieses Flag gesetzt wird, kommt beim Start von PersoSim die Fehlermeldung, dass die Datei defekt sei und in den Mülleimer verschoben werden sollte. Man kann dieses Problem umgehen, indem man die PersoSim-Datei über einen anderen Weg als den Browser herunterlädt, z.B. über wget. Oder man entfernt nach dem Download das Quarantäne-Flag mit folgendem Kommando: 
-```bash
-   sudo xattr -r -d com.apple.quarantine /path/to/de.persosim.rcp.product-x.x.x-202xxxxxx-macosx.cocoa.x86_64.tar.gz
-``` 
+macOS versieht heruntergeladene Dateien mit einem Quarantäne-Flag, wodurch PersoSim beim Start als defekt gemeldet wird. Wie sich das Problem umgehen lässt, beschreibt der [Hinweis zu macOS](#macos-quarantine) im Kapitel Installation.
+
 
 
 
