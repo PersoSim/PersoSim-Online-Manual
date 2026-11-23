@@ -38,11 +38,11 @@ Die AusweisApp kommuniziert von Haus aus mit einem für den Echtbetrieb ausgeleg
 - In der Datei ‚config.json‘ im Verzeichnis der AusweisApp können Sie den eID-Server umstellen. Unter “selfAuthentication” stellen Sie bitte auf den folgenden eID-Testserver um: [https://test.governikus-eid.de/AusweisAuskunft/WebServiceRequesterServlet?mode=json](https://test.governikus-eid.de/AusweisAuskunft/WebServiceRequesterServlet?mode=json).
 
 ### Warum lässt sich der Treiber unter Windows nicht mehr installieren?
+Das Problem wurde mit der neusten Treiberversion behoben. Die Firma adesso hat zwischenzeitlich im Rahmen des Projekts Fidelio aber eine signierte Version des Treibers für Windows bereitgestellt.
+
 Microsoft hat die Restriktionen für Treibersignaturen seit Windows 10 verschärft. Seit Version 1809 ist es nicht mehr möglich, unsignierte Treiber zu installieren, stattdessen führt die Installation zum Fehlercode „0x80070643“. Ein Workaround besteht darin, Windows 10 im erweiterten Modus zu starten, in welchem man die Treibersignaturprüfung einmalig deaktivieren kann. Eine Anleitung, um in diesem Modus zu starten, findet sich z. B. [hier](https://www.tobias-hartmann.net/2018/05/windows-10-erzwingen-der-treibersignatur-deaktivieren/). Für die späteren Starts ist dieser Vorgang nicht mehr nötig, PersoSim funktioniert dennoch.
 
 Wichtig ist dabei, dass man ggf. zunächst die Reste der vorherigen Installationsversuche (=Virtuelle Kartenleser ohne Treiber) aus dem Geräte-Manager entfernt. Ansonsten sind anschließend mehrere virtuelle Leser installiert und PersoSim kommuniziert nicht korrekt mit dem Leser.
-
-Die Firma adesso hat zwischenzeitlich im Rahmen des Projekts Fidelio aber eine signierte Version des Treibers für Windows bereitgestellt.
 
 Alternativ zum virtuellen Kartenleser können Sie auch die Remote-IFD-Schnittstelle von PersoSim nutzen. Diese können Sie auch lokal einsetzen, um mit PersoSim zu kommunizieren.
 

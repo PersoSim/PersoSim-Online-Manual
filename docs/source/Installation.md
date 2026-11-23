@@ -48,10 +48,10 @@ Das Vorgehen für die Installation des Treibers ist betriebssystemabhängig. Im 
 Für die Installation von PersoSim wird lediglich als Betriebssystem Windows 10 oder neuer vorausgesetzt.
 Der Treiber erkennt selbständig, um welche Version von Windows es sich handelt, und erkennt auch automatisch die Architektur (32 oder 64 Bit). Zur Installation des Treibers muss lediglich den Anweisungen des Installationsprogramms Folge geleistet werden. Im Gegensatz zu älteren Versionen des Treibers müssen keine Testzertifikate mehr separat installiert werden. Nach erfolgreicher Installation erscheint der virtuelle Kartenleser ähnlich wie physische Kartenleser als ”PersoSim Virtual Reader” im Gerätemanager unter Smartcard-Leser und kann genutzt werden.
 
-- Der Windows-Treiber enthält die notwendigen Dateien sowohl für Windows 10 als auch für Windows 11, jeweils für die Architektur mit 32 Bit oder 64 Bit. Das Installationspaket für Windows finden Sie hier: [PersoSim_Win_Driver_x64.zip](https://persosim.github.io/software/PersoSim_Win_Driver_x64.zip)
+- Der Windows-Treiber enthält die notwendigen Dateien sowohl für Windows 10 als auch für Windows 11, jeweils für die Architektur mit 32 Bit oder 64 Bit. Das Installationspaket für Windows ist zu finden unter: [PersoSim_Win_Driver_x64.zip](https://persosim.github.io/software/PersoSim_Win_Driver_x64.zip)
 
 #### Linux
-Den Treiber für Linux und macOS müssen Sie derzeit selbst kompilieren. Die Sourcen finden Sie hier: [PersoSim_Driver_PCSCLite_20240917.tgz](https://persosim.github.io/software/PersoSim_Driver_PCSCLite_20240917.tgz)
+Den Treiber für Linux und macOS muss derzeit selbst kompiliert werden. Die Sourcen sind zu finden unter: [PersoSim_Driver_PCSCLite_20240917.tgz](https://persosim.github.io/software/PersoSim_Driver_PCSCLite_20240917.tgz)
 
 Die folgende Anleitung zur Installation des Treibers unter Linux wurde für Debian 13 erstellt und dort getestet. Sie ist aber grundsätzlich auch auf anderen Linux-Derivaten durchführbar.
 Zusätzlich zur Debian-13-Standardinstallation werden die folgenden Pakete benötigt:
@@ -86,7 +86,7 @@ Analog zur Installation lässt sich der Treiber mit dem folgenden Kommando deins
 ``` 
 
    
-Alternativ zum virtuellen Kartenleser können Sie auch die Remote-IFD-Schnittstelle von PersoSim nutzen. Diese können Sie auch lokal einsetzen, um mit PersoSim zu kommunizieren.
+Alternativ zum virtuellen Kartenleser kann auch die Remote-IFD-Schnittstelle von PersoSim genutzt werden. Diese kann auch lokal eingesetzt werden, um mit PersoSim zu kommunizieren.
 
 #### macOS
 Um die notwendige Toolchain auf macOS bereitzustellen, muss Xcode installiert werden. Zusätzlich müssen die ”command line developer tools” installiert werden. Das genaue Vorgehen hängt von der genutzten macOS- und Xcode-Version ab. Für aktuelle Versionen sollte der Konsolenbefehl zu einem Dialog für die Installation der Kommandozeilenwerkzeuge führen:
@@ -111,13 +111,13 @@ Der Start erfolgt betriebssystemabhängig über die PersoSim.exe unter Windows b
 
 Im selben Verzeichnis liegt der PersoSim Controller (PersoSimControllerc.exe unter Windows bzw. PersoSimController unter Linux und macOS), mit dem sich PersoSim fernsteuern lässt (siehe [Controller](#controler)).
 
-Starten Sie den Simulator (Eclipse RCP) für die jeweilige Plattform (Win, macOS, Linux) im entpackten Verzeichnis. Unterstützt werden mittlerweile nur noch die Versionen mit 64 Bit!
+Der Simulator (Eclipse RCP) für die jeweilige Plattform (Win, macOS, Linux) kann dann im entpackten Verzeichnis gestartet werden. Der Simulator unterstützt mittlerweile nur noch die Versionen mit 64 Bit!
 
 <hr style="height: 2px; background: #00509B;">
 <br>
 
 ### Android (optional)
-Starten Sie die Android-Version. Das APK für Android finden Sie hier: [PersoSim_0_17_2.apk](https://persosim.github.io/software/PersoSim_0_17_2.apk)
+Die Android Version von PersoSim wird nicht mehr aktiv weiterentwickelt. Die letzte erstellte APK ist erhältlich unter: [PersoSim_0_17_2.apk](https://persosim.github.io/software/PersoSim_0_17_2.apk)
 
-Weitere Versionen von PersoSim finden Sie unter [Releases](https://github.com/PersoSim/PersoSim/releases) auf der GitHub-Seite.
+Weitere Versionen von PersoSim sind zu finden unter [Releases](https://github.com/PersoSim/PersoSim/releases) auf der GitHub-Seite.
 
