@@ -1,6 +1,12 @@
 # Neuigkeiten
 Die folgenden Neuigkeiten sind chronologisch sortiert und die neuesten Einträge stehen oben.
 
+## Android Smart Card Emulator Version 4.0 
+```{hint}
+Die mit PersoSim kompatible Version 4.0 der App [„Smart Card Emulator“](https://github.com/frankmorgner/vsmartcard) ist jetzt direkt über den [F-Droid Store](https://f-droid.org/de/packages/com.vsmartcard.acardemulator) verfügbar. Damit ist eine manuelle Installation nicht mehr länger notwendig. Mithilfe der App kann ein Android Smartphone über seine NFC-Schnittstelle in Verbindung mit der PersoSim-Schnittstelle VSmartCard eine eID-Karte simulieren. Wir möchten uns für diese Veröffentlichung bei Frank Morgner, dem Entwickler des Projekts VSmartCard, bedanken.
+```
+
+
 ## PersoSim 1.8 mit neuer Oberfläche und integriertem Editor
 ```{hint}
 Mit Version 1.8 erhält PersoSim eine neu gestaltete Oberfläche, die in drei Schritten durch die Simulation führt: Profilauswahl, Technologieauswahl und Simulation. Die wichtigsten Änderungen:
