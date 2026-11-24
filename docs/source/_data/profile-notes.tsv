@@ -12,12 +12,12 @@ nPA_10_LONG-FIELDS	maximale Feldlängen
 nPA_11_EXPIRED	Gültigkeit abgelaufen
 nPA_12_SUPPORTED_CHARACTERS_1	erste Hälfte des zulässigen Zeichensatzes (DIN 91379 gemäß BSI TR-03123 Teil 3), Zeichen in aufsteigender Reihenfolge
 nPA_13_SUPPORTED_CHARACTERS_2	zweite Hälfte des zulässigen Zeichensatzes; mit nPA_12 vollständig, einschließlich der nur für Orte und Titel zulässigen Zeichen
-eAT_01_K-SATO	Japanische Staatsangehörigkeit, o mit Makron
+eAT_01_K-SATO	japanische Staatsangehörigkeit, o mit Makron
 eAT_02_A-PAZ	Geburtsdatum nur Jahr, i mit Akut, Hausnummernbereich
 eAT_03_S-ESQUIVEL	Geburtsort außerhalb des Staats der Staatsangehörigkeit, o mit Akut
 eAT_04_A-MACDIARMID	Doktorgrad, zweizeilige Straßenangabe
 eAT_05_W-SOYINKA	Anschrift ohne Region, kapverdische Staatsangehörigkeit
-UB_01_M-MUSTERMANN	Finnische Staatsangehörigkeit, Wohnort in Deutschland
+UB_01_M-MUSTERMANN	finnische Staatsangehörigkeit, Wohnort in Deutschland
 UB_02_T-MARTINIK	Wohnort im Vereinigten Königreich, DG18 nur Ländercode
 UB_03_M-GARCIA-LOPEZ	Ordensname und Doktorgrad, mehrere Vor- und Nachnamen
 UB_04_P-O-RUDAI	unvollständiges Geburtsdatum, Künstlername, Adresse aus Quadratestadt

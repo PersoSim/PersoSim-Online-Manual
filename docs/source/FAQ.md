@@ -12,7 +12,7 @@ Es wird zwischen der Anwender-Community hier auf dieser Website und der Entwickl
 secunet bietet Ihnen über den Support hier in der Community auch Trainings zum Thema PersoSim an. Weiterhin wird auch Unterstützung bei der Integration von PersoSim in Ihren Entwicklungs- bzw. Testprozess angeboten (Continuous Integration). Kontaktieren Sie secunet dazu bitte über info@secunet.com.
 
 ### Gibt es Veröffentlichungen zum Thema PersoSim?
-PersoSim wurde auf unterschiedlichen Veranstaltungen wie dem BSI IT-Sicherheitskongress oder der Security Document World präsentiert. Darüber hinaus gibt es Veröffentlichungen zum Thema, z.B. in der Zeitschrift Datenschutz und Datensicherheit (DuD). Soweit verfügbar, finden Sie die Präsentationen und Artikel im Kapitel [Publikation](Publication.md).
+PersoSim wurde auf unterschiedlichen Veranstaltungen wie dem BSI IT-Sicherheitskongress oder der Security Document World präsentiert. Darüber hinaus gibt es Veröffentlichungen zum Thema, z. B. in der Zeitschrift Datenschutz und Datensicherheit (DuD). Soweit verfügbar, finden Sie die Präsentationen und Artikel im Kapitel [Publikation](Publication.md).
 
 
 ## Einsatz des Simulators
@@ -35,12 +35,12 @@ Damit Sie nicht in den XML-Dateien editieren müssen, um eigene Profile zu erste
 Die AusweisApp kommuniziert von Haus aus mit einem für den Echtbetrieb ausgelegten eID-Server, der die Echtheit des simulierten Ausweises berechtigterweise anzweifelt. Um die simulierten Personalausweise auszulesen, gibt es zwei Möglichkeiten:
 
 - In der Oberfläche der AusweisApp klicken Sie bitte zehnmal auf die Versionsnummer. Damit aktivieren Sie den Entwicklermodus. Im Entwicklermodus können Sie dann unter Einstellungen im Bereich Entwicklermodus den Testmodus für die Selbstauskunft aktivieren.
-- In der Datei ‚config.json‘ im Verzeichnis der AusweisApp können Sie den eID-Server umstellen. Unter “selfAuthentication” stellen Sie bitte auf den folgenden eID-Testserver um: [https://test.governikus-eid.de/AusweisAuskunft/WebServiceRequesterServlet?mode=json](https://test.governikus-eid.de/AusweisAuskunft/WebServiceRequesterServlet?mode=json).
+- In der Datei ‚config.json‘ im Verzeichnis der AusweisApp können Sie den eID-Server umstellen. Unter „selfAuthentication“ stellen Sie bitte auf den folgenden eID-Testserver um: [https://test.governikus-eid.de/AusweisAuskunft/WebServiceRequesterServlet?mode=json](https://test.governikus-eid.de/AusweisAuskunft/WebServiceRequesterServlet?mode=json).
 
 ### Warum lässt sich der Treiber unter Windows nicht mehr installieren?
 Microsoft hat die Restriktionen für Treibersignaturen seit Windows 10 verschärft. Seit Version 1809 ist es nicht mehr möglich, unsignierte Treiber zu installieren, stattdessen führt die Installation zum Fehlercode „0x80070643“. Ein Workaround besteht darin, Windows 10 im erweiterten Modus zu starten, in welchem man die Treibersignaturprüfung einmalig deaktivieren kann. Eine Anleitung, um in diesem Modus zu starten, findet sich z. B. [hier](https://www.tobias-hartmann.net/2018/05/windows-10-erzwingen-der-treibersignatur-deaktivieren/). Für die späteren Starts ist dieser Vorgang nicht mehr nötig, PersoSim funktioniert dennoch.
 
-Wichtig ist dabei, dass man ggf. zunächst die Reste der vorherigen Installationsversuche (=Virtuelle Kartenleser ohne Treiber) aus dem Geräte-Manager entfernt. Ansonsten sind anschließend mehrere virtuelle Leser installiert und PersoSim kommuniziert nicht korrekt mit dem Leser.
+Wichtig ist dabei, dass man ggf. zunächst die Reste der vorherigen Installationsversuche (= virtuelle Kartenleser ohne Treiber) aus dem Geräte-Manager entfernt. Ansonsten sind anschließend mehrere virtuelle Leser installiert und PersoSim kommuniziert nicht korrekt mit dem Leser.
 
 Die Firma adesso hat zwischenzeitlich im Rahmen des Projekts Fidelio aber eine signierte Version des Treibers für Windows bereitgestellt.
 

@@ -5,12 +5,12 @@
 PersoSim führt den Anwender in drei Schritten durch die Simulation: Zuerst wird ein Profil ausgewählt (**Profile Selection**), dann die Technologie, über die die simulierte Karte bereitgestellt wird (**Technology Selection**), und schließlich wird die Simulation gestartet (**Simulation**). Der PersoSim Editor ist in die Profilauswahl integriert (siehe [Profile bearbeiten](#chap:profilesEdit)).
 
 ```{figure} ../figures/gui.png
-:alt: PersoSim - Profilauswahl
+:alt: PersoSim – Profilauswahl
 :width: 600
 :figclass: center-figure
 :name: fig-gui
 
-: Ausweissimulator PersoSim - Benutzeroberfläche mit der Profilauswahl
+: Ausweissimulator PersoSim – Benutzeroberfläche mit der Profilauswahl
 ```
 
 Das Fenster ist in drei Bereiche gegliedert (siehe {numref}`fig-gui`):
@@ -28,7 +28,7 @@ Das Fenster ist in drei Bereiche gegliedert (siehe {numref}`fig-gui`):
 : Dialog „About PersoSim“
 ```
 
-Ist **Start Simulation** ausgegraut, nennt der Tooltip der Schaltfläche den Grund, z.B. dass kein Profil ausgewählt ist oder dass das Profil ungespeicherte Änderungen enthält. Wer die Seite **Simulation** während einer laufenden Simulation verlässt, wird gefragt, ob die Simulation beendet werden soll.
+Ist **Start Simulation** ausgegraut, nennt der Tooltip der Schaltfläche den Grund, z. B. dass kein Profil ausgewählt ist oder dass das Profil ungespeicherte Änderungen enthält. Wer die Seite **Simulation** während einer laufenden Simulation verlässt, wird gefragt, ob die Simulation beendet werden soll.
 
 PersoSim übernimmt automatisch das helle oder dunkle Farbschema des Betriebssystems; eine Änderung der Systemeinstellung wird auch während der Laufzeit übernommen.
 
@@ -41,7 +41,7 @@ Im ersten Schritt **Profile Selection** wird das Profil (die Personalisierung) g
 - **nPA Standard Profiles:** die mitgelieferten Profile des Personalausweises.
 - **eAT Standard Profiles:** die mitgelieferten Profile des elektronischen Aufenthaltstitels.
 - **UB Standard Profiles:** die mitgelieferten Profile der eID-Karte für Unionsbürger.
-- **Unsupported Profiles:** Sonderprofile, z.B. mit nicht zulässigen Zeichen oder eingeschränkten Protokollen.
+- **Unsupported Profiles:** Sonderprofile, z. B. mit nicht zulässigen Zeichen oder eingeschränkten Protokollen.
 - **Profile History:** die zehn zuletzt gewählten Profile aus allen Quellen, das neueste zuoberst.
 
 Das gewünschte Profil wird anschließend in der Auswahlliste **Select the profile** gewählt (siehe {numref}`fig-select-profile`). Der Tooltip der Liste beschreibt kurz, wofür sich das jeweilige Profil eignet. Eine Übersicht aller mitgelieferten Profile und ihrer Daten befindet sich im Kapitel [Standardprofile](#profile).
@@ -90,9 +90,9 @@ Die zuletzt gewählte Technologie merkt sich PersoSim für den nächsten Program
 : Auswahl der Technologie
 ```
 
-**Basis- und Standardleser:** Bei **Virtual PCSC Driver** und **Remote IFD** lässt sich zusätzlich wählen, ob PersoSim einen Basisleser (**Basic Reader**) oder einen Standardleser (**Standard Reader**) simuliert. Basisleser besitzen in der Regel weder Display noch Tastatur. Standardleser verfügen über ein Display und eine Tastatur, über die z.B. Informationen gemäß [BSI TR-03119](https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03119/TR-03119_node.html) angezeigt und Passwörter eingegeben werden können. Beim Standardleser gibt der Anwender PIN, CAN oder PUK deshalb in PersoSim ein (siehe [Simulation](#chap:simulation)). Nach einem Wechsel des Lesertyps weist PersoSim darauf hin, dass der laufende Vorgang in der Anwendung, die den Leser benutzt (z.B. der AusweisApp), abgebrochen und neu gestartet werden muss, damit sie den neuen Lesertyp erkennt.
+**Basis- und Standardleser:** Bei **Virtual PCSC Driver** und **Remote IFD** lässt sich zusätzlich wählen, ob PersoSim einen Basisleser (**Basic Reader**) oder einen Standardleser (**Standard Reader**) simuliert. Basisleser besitzen in der Regel weder Display noch Tastatur. Standardleser verfügen über ein Display und eine Tastatur, über die z. B. Informationen gemäß [BSI TR-03119](https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03119/TR-03119_node.html) angezeigt und Passwörter eingegeben werden können. Beim Standardleser gibt der Anwender PIN, CAN oder PUK deshalb in PersoSim ein (siehe [Simulation](#chap:simulation)). Nach einem Wechsel des Lesertyps weist PersoSim darauf hin, dass der laufende Vorgang in der Anwendung, die den Leser benutzt (z. B. der AusweisApp), abgebrochen und neu gestartet werden muss, damit sie den neuen Lesertyp erkennt.
 
-**Prüfen der Konfiguration:** Jede Technologie hat im rechten Bereich ihre Einstellungen und eine Schaltfläche **Check**. Sie prüft, ob die Voraussetzungen für die Technologie erfüllt sind, beim virtuellen Kartenleser z.B., ob der Treiber antwortet und ob der virtuelle Leser in der PC/SC-Leserliste eingetragen ist. Die Ergebnisse erscheinen für einige Sekunden mit einem grünen bzw. roten Symbol und werden zusätzlich im Log festgehalten. Dieselben Prüfungen laufen automatisch beim Klick auf **Start Simulation**. Schlägt eine Prüfung fehl, wechselt PersoSim zur Technologieauswahl, lässt die Ergebnisse stehen und markiert den Schritt in der Ablaufleiste rot (siehe {numref}`fig-technology-check-failed`).
+**Prüfen der Konfiguration:** Jede Technologie hat im rechten Bereich ihre Einstellungen und eine Schaltfläche **Check**. Sie prüft, ob die Voraussetzungen für die Technologie erfüllt sind, beim virtuellen Kartenleser z. B., ob der Treiber antwortet und ob der virtuelle Leser in der PC/SC-Leserliste eingetragen ist. Die Ergebnisse erscheinen für einige Sekunden mit einem grünen bzw. roten Symbol und werden zusätzlich im Log festgehalten. Dieselben Prüfungen laufen automatisch beim Klick auf **Start Simulation**. Schlägt eine Prüfung fehl, wechselt PersoSim zur Technologieauswahl, lässt die Ergebnisse stehen und markiert den Schritt in der Ablaufleiste rot (siehe {numref}`fig-technology-check-failed`).
 
 ```{figure} ../figures/technology-check-failed.png
 :alt: Fehlgeschlagene Prüfung der Technologie
@@ -128,7 +128,7 @@ Die zuletzt gewählte Technologie merkt sich PersoSim für den nächsten Program
 
 (chap:remoteifd)=
 ## Smartphone als Kartenleser
-Die [BSI TR-03112-6](https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03112/TR-03112_node.html) sieht die Funktion ”Remote-IFD” vor, auch bekannt unter dem Namen ”Smartphone als Kartenleser”. Mit dieser Funktion lässt sich ein NFC-fähiges Smartphone als Kartenleser im Kontext des Personalausweises nutzen. Auch PersoSim unterstützt diese Funktion und kann so von einem eID-Client per Netzwerk angesprochen werden.
+Die [BSI TR-03112-6](https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03112/TR-03112_node.html) sieht die Funktion „Remote-IFD“ vor, auch bekannt unter dem Namen „Smartphone als Kartenleser“. Mit dieser Funktion lässt sich ein NFC-fähiges Smartphone als Kartenleser im Kontext des Personalausweises nutzen. Auch PersoSim unterstützt diese Funktion und kann so von einem eID-Client per Netzwerk angesprochen werden.
 
 Um diese Funktion zu nutzen, wird in der Technologieauswahl **Remote IFD** gewählt (siehe {numref}`fig-remoteifd-pairing`).
 
@@ -177,13 +177,13 @@ Im rechten Bereich zeigt **Retrieved Data** die Daten des simulierten Profils. H
 
 **Reader Input:** Dieser Bereich ist nur beim Standardleser aktiv und dient als Ersatz für ein klassisches PinPad eines Kartenlesers:
 
-- Oben steht die Aufforderung des Lesers, z.B. „Enter PIN“.
+- Oben steht die Aufforderung des Lesers, z. B. „Enter PIN“.
 - In der Auswahlliste links wird die Art des Passworts gewählt (PIN, CAN oder PUK). Fordert der Leser ein Passwort an, stellt PersoSim die Art automatisch ein.
 - Im Eingabefeld wird das Passwort eingegeben und mit **OK** bestätigt. Über den Pfeil neben dem Feld lassen sich die letzten fünf eingegebenen Werte der jeweiligen Art erneut auswählen.
 - Ist **Automatic Input** angehakt, beantwortet PersoSim Anfragen nach PIN, CAN oder PUK automatisch mit dem zuletzt eingetragenen Wert. Die Option lässt sich auch während der Simulation umschalten. Anfragen nach einer neuen PIN (PIN-Änderung) beantwortet PersoSim nie automatisch.
 - Unterhalb der Eingabe wird der CHAT der laufenden Authentisierung angezeigt. Verweilt man mit der Maus darüber, werden die angefragten Zugriffsrechte menschenlesbar aufgeschlüsselt.
 
-Wartet der Leser auf ein Passwort, wird der Schritt in der Ablaufleiste gelb markiert und das Eingabefeld blinkt kurzzeitg.
+Wartet der Leser auf ein Passwort, wird der Schritt in der Ablaufleiste gelb markiert und das Eingabefeld blinkt kurzzeitig.
 
 **Credential Status:** Dieser Bereich zeigt die Fehlbedienungszähler: für die PIN die verbleibenden Versuche (**Retries left**), für die PUK den Entsperrzähler (**Reset Counter**). Vor dem Start stehen hier die Werte des Profils, während der Simulation die aktuellen Werte der simulierten Karte. Erreicht der Entsperrzähler der PUK den Wert 0, weist PersoSim einmalig darauf hin, dass die PIN nicht mehr entsperrt werden kann.
 

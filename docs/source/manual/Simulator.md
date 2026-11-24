@@ -10,7 +10,7 @@ Im Rahmen der Entwicklung des Testwerkzeugs [GlobalTester](https://www.secunet.c
 : Kommunikation des Simulators veranschaulicht am Schichtenmodell ISO/OSI
 ```
 
-Da für ein Open Source Projekt wie PersoSim die Hardware aufgrund der hohen Kosten nur schwer zur Verfügung steht, steht hier eine Alternative zur Verfügung. Statt physischer Hardware wird hier ein virtueller Kartenleser genutzt, der sich wie ein ganz normaler Kartenleser in bestehende Anwendungen integrieren lässt und der die Kommunikation mit dem Simulator übernimmt. In obiger Abbildung ist diese Art der Kommunikation ebenfalls abgebildet. Zusätzlich unterstützt PersoSim auch den Android Smart Card Emulator aus dem vsmartcard-Projekt (eine Emulation einer Smartcard auf einem Android-Smartphone).
+Da für ein Open-Source-Projekt wie PersoSim die Hardware aufgrund der hohen Kosten nur schwer verfügbar ist, gibt es hier eine Alternative. Statt physischer Hardware wird hier ein virtueller Kartenleser genutzt, der sich wie ein ganz normaler Kartenleser in bestehende Anwendungen integrieren lässt und der die Kommunikation mit dem Simulator übernimmt. In obiger Abbildung ist diese Art der Kommunikation ebenfalls abgebildet. Zusätzlich unterstützt PersoSim auch den Android Smart Card Emulator aus dem vsmartcard-Projekt (eine Emulation einer Smartcard auf einem Android-Smartphone).
 
 Die folgende Grafik ordnet den Simulator aus dem Projekt PersoSim in den Kontext des deutschen Personalausweises und der eID-Clients sowie der eID-Server ein (siehe {numref}`fig-architecture`).
 

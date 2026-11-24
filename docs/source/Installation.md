@@ -1,5 +1,5 @@
 # Installation
-Dieses Kapitel enthält die Dateien, die für den Betrieb des Simulators nötig sind, sowie eine kurze Anleitung zur Installation. Es wird neben Windows auch Linux und macOS für die stationäre Variante von PersoSim unterstützt. Für ältere Smartphones mit NFC liegt ein Android-APK bereit.
+Dieses Kapitel enthält die Dateien, die für den Betrieb des Simulators nötig sind, sowie eine kurze Anleitung zur Installation. Es werden neben Windows auch Linux und macOS für die stationäre Variante von PersoSim unterstützt. Für ältere Smartphones mit NFC liegt ein Android-APK bereit.
 
 PersoSim ist auf den 64-Bit-Betriebssystemen Windows, Linux und macOS lauffähig. 
 
@@ -24,16 +24,16 @@ Empfohlen wird entweder:
 
 ## Installationsanleitung
 
-### Installation des PersoSim Simulators
+### Installation des PersoSim-Simulators
 PersoSim erfordert keine Installation im klassischen Sinne und ist nach dem Entpacken der Zip-Datei bzw. des Tar-Balls sofort lauffähig. Eine separate Installation des Editors ist seit Version 1.8 nicht mehr nötig.
 
 Die Dateien für Windows, macOS und Linux stehen hier zum Download bereit: {{ release_url }}.
 
 (macos-quarantine)=
 :::{hint}
-**Felermeldung unter macOS: PersoSim-Datei wird als defekt angezeigt**
+**Fehlermeldung unter macOS: PersoSim-Datei wird als defekt angezeigt**
 
-Nach dem Download einer Datei unter macOS in das Standard-Verzeichnis “Downloads” setzt macOS für diese Datei ein Quarantäne-Flag. Sobald dieses Flag gesetzt wird, kommt beim Start von PersoSim die Fehlermeldung, dass die Datei defekt sei und in den Mülleimer verschoben werden sollte. Man kann dieses Problem umgehen, indem man die PersoSim-Datei über einen anderen Weg als den Browser herunterlädt, z.B. über wget. Oder man entfernt nach dem Download das Quarantäne-Flag mit folgendem Kommando:
+Nach dem Download einer Datei unter macOS in das Standard-Verzeichnis „Downloads“ setzt macOS für diese Datei ein Quarantäne-Flag. Sobald dieses Flag gesetzt wird, kommt beim Start von PersoSim die Fehlermeldung, dass die Datei defekt sei und in den Mülleimer verschoben werden sollte. Man kann dieses Problem umgehen, indem man die PersoSim-Datei über einen anderen Weg als den Browser herunterlädt, z. B. über wget. Oder man entfernt nach dem Download das Quarantäne-Flag mit folgendem Kommando:
 
 ```bash
 sudo xattr -r -d com.apple.quarantine /path/to/de.persosim.rcp.product-x.x.x-202xxxxxx-macosx.cocoa.x86_64.tar.gz
@@ -46,9 +46,9 @@ Das Vorgehen für die Installation des Treibers ist betriebssystemabhängig. Im 
 
 #### Windows
 Für die Installation von PersoSim wird lediglich als Betriebssystem Windows 10 oder neuer vorausgesetzt.
-Der Treiber erkennt selbständig, um welche Version von Windows es sich handelt, und erkennt auch automatisch die Architektur (32 oder 64 Bit). Zur Installation des Treibers muss lediglich den Anweisungen des Installationsprogramms Folge geleistet werden. Im Gegensatz zu älteren Versionen des Treibers müssen keine Testzertifikate mehr separat installiert werden. Nach erfolgreicher Installation erscheint der virtuelle Kartenleser ähnlich wie physische Kartenleser als ”PersoSim Virtual Reader” im Gerätemanager unter Smartcard-Leser und kann genutzt werden.
+Der Treiber erkennt selbständig, um welche Version von Windows es sich handelt. Zur Installation des Treibers muss lediglich den Anweisungen des Installationsprogramms Folge geleistet werden. Im Gegensatz zu älteren Versionen des Treibers müssen keine Testzertifikate mehr separat installiert werden. Nach erfolgreicher Installation erscheint der virtuelle Kartenleser ähnlich wie physische Kartenleser als „PersoSim Virtual Reader“ im Geräte-Manager unter Smartcard-Leser und kann genutzt werden.
 
-- Der Windows-Treiber enthält die notwendigen Dateien sowohl für Windows 10 als auch für Windows 11, jeweils für die Architektur mit 32 Bit oder 64 Bit. Das Installationspaket für Windows finden Sie hier: [PersoSim_Win_Driver_x64.zip](https://persosim.github.io/software/PersoSim_Win_Driver_x64.zip)
+- Der Windows-Treiber enthält die notwendigen Dateien sowohl für Windows 10 als auch für Windows 11, jeweils für die 64-Bit-Architektur. Das Installationspaket für Windows finden Sie hier: [PersoSim_Win_Driver_x64.zip](https://persosim.github.io/software/PersoSim_Win_Driver_x64.zip)
 
 #### Linux
 Den Treiber für Linux und macOS müssen Sie derzeit selbst kompilieren. Die Sourcen finden Sie hier: [PersoSim_Driver_PCSCLite_20240917.tgz](https://persosim.github.io/software/PersoSim_Driver_PCSCLite_20240917.tgz)
@@ -89,7 +89,7 @@ Analog zur Installation lässt sich der Treiber mit dem folgenden Kommando deins
 Alternativ zum virtuellen Kartenleser können Sie auch die Remote-IFD-Schnittstelle von PersoSim nutzen. Diese können Sie auch lokal einsetzen, um mit PersoSim zu kommunizieren.
 
 #### macOS
-Um die notwendige Toolchain auf macOS bereitzustellen, muss Xcode installiert werden. Zusätzlich müssen die ”command line developer tools” installiert werden. Das genaue Vorgehen hängt von der genutzten macOS- und Xcode-Version ab. Für aktuelle Versionen sollte der Konsolenbefehl zu einem Dialog für die Installation der Kommandozeilenwerkzeuge führen:
+Um die notwendige Toolchain auf macOS bereitzustellen, muss Xcode installiert werden. Zusätzlich müssen die „command line developer tools“ installiert werden. Das genaue Vorgehen hängt von der genutzten macOS- und Xcode-Version ab. Für aktuelle Versionen sollte der Konsolenbefehl zu einem Dialog für die Installation der Kommandozeilenwerkzeuge führen:
 
 ```bash
    xcode-select --install

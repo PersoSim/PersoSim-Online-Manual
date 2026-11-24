@@ -1,7 +1,7 @@
 # Technik
 
 ## Einführung
-Dieser Abschnitt enthält technische Details, die im Kontext des elektronischen Personalausweises interessant sind. Genauer gesagt geht es um die Varianten des Personalausweises, eID-Clients für den elektronischen Personalausweis sowie Open Source Projekte im Kontext des Personalausweises.
+Dieser Abschnitt enthält technische Details, die im Kontext des elektronischen Personalausweises interessant sind. Genauer gesagt geht es um die Varianten des Personalausweises sowie um Open-Source-Projekte im Kontext des Personalausweises, darunter auch eID-Clients.
 
 
 ## Varianten des Personalausweises
@@ -12,13 +12,13 @@ Die sogenannte DefectList beinhaltet Produktionsfehler und -änderungen, die bei
 PersoSim versucht möglichst viele verschiedene Personalisierungen abzudecken, eine Übersicht über die unterschiedlichen Profile gibt es im Kapitel [Standardprofile](#profile).
 
 
-## Open Source Projekte im Kontext des Personalausweises
-Im Kontext des Personalausweises gibt es unterschiedliche Projekte. An dieser Stelle erhalten Open Source Projekte die Möglichkeit, sich vorzustellen. Diese Liste wird mit der Zeit erweitert. Fehlt ein Projekt in dieser Liste, genügt eine Nachricht an die Support-Adresse support@persosim.de.
+## Open-Source-Projekte im Kontext des Personalausweises
+Im Kontext des Personalausweises gibt es unterschiedliche Projekte. An dieser Stelle erhalten Open-Source-Projekte die Möglichkeit, sich vorzustellen. Diese Liste wird mit der Zeit erweitert. Fehlt ein Projekt in dieser Liste, genügt eine Nachricht an die Support-Adresse support@persosim.de.
 
-- androsmex: Eine Implementierung des PACE-Protokolls für Android-Geräte mit NFC-Schnittstelle. Siehe: [code.google.com/p/androsmex](https://github.com/tsenger/androsmex)
+- androsmex: Eine Implementierung des PACE-Protokolls für Android-Geräte mit NFC-Schnittstelle. Siehe [https://github.com/tsenger/androsmex](https://github.com/tsenger/androsmex)
 - eIDClientCore: Eine gemeinsame Initiative der Bundesdruckerei und der Humboldt-Universität Berlin, um eine clientseitige eID-Basis-Software zum Bereitstellen der eID-Funktionalität zu entwickeln. Siehe [https://sar.informatik.hu-berlin.de/BeID-lab/eIDClientCore/](https://sar.informatik.hu-berlin.de/BeID-lab/eIDClientCore/)
 - openpace: Krypto-Bibliothek mit allen EAC2-Protokollen. Siehe [https://github.com/frankmorgner/openpace](https://github.com/frankmorgner/openpace)
 - AusweisApp: eID-Client der Firma Governikus zum Auslesen des Personalausweises. Siehe [www.ausweisapp.bund.de](https://www.ausweisapp.bund.de/home/)
 - openecard: eID-Client der Firma ecsec zum Auslesen des Personalausweises. Siehe [www.openecard.org](https://www.openecard.org/)
-- vsmartcard: Projekt mit allerlei Tools rund um den Personalausweis, u.a. der SmartCardEmulator. Siehe [https://github.com/frankmorgner/vsmartcard](https://github.com/frankmorgner/vsmartcard)
+- vsmartcard: Projekt mit allerlei Tools rund um den Personalausweis, u. a. der SmartCardEmulator. Siehe [https://github.com/frankmorgner/vsmartcard](https://github.com/frankmorgner/vsmartcard)
 

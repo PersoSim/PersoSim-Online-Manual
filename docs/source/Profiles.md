@@ -2,7 +2,7 @@
 
 (profile)=
 ## Standardprofile
-In PersoSim werden nicht nur typische Profile, wie sie im physischen Personalausweis verwendet werden genutzt, sondern auch Profile des elektronischen Aufenthaltstitels (eAT), der eID-Karte für Unionsbürger (UB) sowie Sonderprofile für besondere Testfälle. Alle Profile nutzen als PIN die 123456 (Ausnahme: nPA_02 mit der Transport-PIN 12345), als CAN die 500540 und als PUK die 9876543210. Der Entsperrzähler der PUK steht bei allen Profilen auf 10.
+In PersoSim werden nicht nur typische Profile, wie sie im physischen Personalausweis verwendet werden, genutzt, sondern auch Profile des elektronischen Aufenthaltstitels (eAT), der eID-Karte für Unionsbürger (UB) sowie Sonderprofile für besondere Testfälle. Alle Profile nutzen als PIN die 123456 (Ausnahme: nPA_02 mit der Transport-PIN 12345), als CAN die 500540 und als PUK die 9876543210. Der Entsperrzähler der PUK steht bei allen Profilen auf 10.
 
 Die folgenden Tabellen geben die Daten der mit PersoSim ausgelieferten Profile wieder, so wie sie im Bereich **Retrieved Data** angezeigt werden. Datumsangaben stehen im Format JJJJ-MM-TT; „XX“ markiert unbekannte Teile eines unvollständigen Geburtsdatums. „(nicht vorhanden)“ bedeutet, dass das Profil die Datengruppe nicht enthält; ein leeres Feld bedeutet, dass die Datengruppe ohne Inhalt vorhanden ist. „␣“ steht für ein Leerzeichen am Anfang oder Ende eines Werts.
 
@@ -38,10 +38,10 @@ Die Sonderprofile unter **Unsupported Profiles** bilden Fälle ab, die ein Termi
 
 (chap:profilesEdit)=
 ## Profile bearbeiten
-Der früher separate PersoSim Editor ist seit Version 1.8 in PersoSim integriert. Eigene Profile entstehen, indem ein vorhandenes Profil, z.B. eines der mitgelieferten Profile, in der Profilauswahl bearbeitet und unter neuem Namen gespeichert wird. Profile bestehen weiterhin aus einer XML-Datei mit der Endung „.perso“, die alle relevanten Informationen für die Simulation enthält; der Anwender muss diese Datei aber nicht direkt bearbeiten.
+Der früher separate PersoSim Editor ist seit Version 1.8 in PersoSim integriert. Eigene Profile entstehen, indem ein vorhandenes Profil, z. B. eines der mitgelieferten Profile, in der Profilauswahl bearbeitet und unter neuem Namen gespeichert wird. Profile bestehen weiterhin aus einer XML-Datei mit der Endung „.perso“, die alle relevanten Informationen für die Simulation enthält; der Anwender muss diese Datei aber nicht direkt bearbeiten.
 
 ### Daten bearbeiten
-Alle Felder im Bereich **Retrieved Data** der Profilauswahl lassen sich direkt bearbeiten, eine eigene Schaltfläche zum Bearbeiten gibt es nicht. Mit der ersten Änderung wechselt der Bereich in den Bearbeitungsmodus: Die Überschrift lautet dann „Edit Retrieved Data“ und endet mit einem "\*", ebenso tragen geänderte Felder und ihre Abschnitte das Suffix "\*". Wird die letzte Änderung zurückgenommen, endet der Bearbeitungsmodus wieder.
+Alle Felder im Bereich **Retrieved Data** der Profilauswahl lassen sich direkt bearbeiten, eine eigene Schaltfläche zum Bearbeiten gibt es nicht. Mit der ersten Änderung wechselt der Bereich in den Bearbeitungsmodus: Die Überschrift lautet dann „Edit Retrieved Data“ und endet mit einem „\*“, ebenso tragen geänderte Felder und ihre Abschnitte das Suffix „\*“. Wird die letzte Änderung zurückgenommen, endet der Bearbeitungsmodus wieder.
 
 Im Abschnitt **eID** stehen die Datengruppen des Profils. Einige Felder bieten zusätzliche Hilfen:
 
@@ -57,7 +57,7 @@ PersoSim unterstützt den Anwender bei der Eingabe, indem es auf fehlerhafte Ein
 - **Rot (Fehler):** Der Wert ist ungültig. Beim Speichern wird der vorherige Wert beibehalten.
 - **Gelb (Warnung):** Der Wert ist ungewöhnlich, wird aber wie eingegeben gespeichert.
 
-Geprüft werden u. a. Formate (z.B. Datumsangaben, Ländercodes, nur Ziffern bei PIN, CAN und PUK), Längen sowie die zulässigen Zeichen gemäß [DIN 91379](https://docs.xoev.de/datentyp.schriftzeichen/%C3%BCbersicht). Namen müssen in Großbuchstaben eingegeben werden.
+Geprüft werden u. a. Formate (z. B. Datumsangaben, Ländercodes, nur Ziffern bei PIN, CAN und PUK), Längen sowie die zulässigen Zeichen gemäß [DIN 91379](https://docs.xoev.de/datentyp.schriftzeichen/%C3%BCbersicht). Namen müssen in Großbuchstaben eingegeben werden.
 
 ```{figure} ../figures/invalid-input.png
 :alt: Fehlerhafte Eingaben
@@ -86,7 +86,7 @@ Ein selbst erstelltes Profil lässt sich später jederzeit über **Profile from 
 
 (chap:expertMode)=
 ### Expertenmodus
-Weitere Funktionen stehen zur Verfügung, wenn in der Kopfzeile von **Retrieved Data** der **Expert Mode** angehakt ist (siehe {numref}`fig-expert-mode`). Während ungespeicherter Änderungen lässt sich der Expertenmodus nicht umschalten.
+Weitere Funktionen stehen zur Verfügung, wenn in der Kopfzeile von **Retrieved Data** der **Expert Mode** angehakt ist (siehe {numref}`fig-expert-mode`). Solange ungespeicherte Änderungen bestehen, lässt sich der Expertenmodus nicht umschalten.
 
 ```{figure} ../figures/expert-mode.png
 :alt: Expertenmodus
@@ -97,7 +97,7 @@ Weitere Funktionen stehen zur Verfügung, wenn in der Kopfzeile von **Retrieved 
 : Profilauswahl im Expertenmodus
 ```
 
-**Export to JSON:** Diese Schaltfläche exportiert das Profil im JSON-Format, z.B. zur Verwendung im Simulator der AusweisApp (siehe {numref}`fig-export-json`). Informationen zum JSON-Format gibt es hier: [AusweisApp-Simulator](https://www.ausweisapp.bund.de/sdk/simulator.html#filesystem). Der Export ist nur möglich, solange keine ungespeicherten Änderungen bestehen. Profile im JSON-Format lassen sich in PersoSim nicht laden.
+**Export to JSON:** Diese Schaltfläche exportiert das Profil im JSON-Format, z. B. zur Verwendung im Simulator der AusweisApp (siehe {numref}`fig-export-json`). Informationen zum JSON-Format gibt es hier: [AusweisApp-Simulator](https://www.ausweisapp.bund.de/sdk/simulator.html#filesystem). Der Export ist nur möglich, solange keine ungespeicherten Änderungen bestehen. Profile im JSON-Format lassen sich in PersoSim nicht laden.
 
 ```{figure} ../figures/export-json.png
 :alt: Export eines Profils im JSON-Format

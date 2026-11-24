@@ -49,7 +49,7 @@ dargestellt, siehe auch:
     </de.persosim.simulator.perso.Profile01>
 ```
 
-Das bereits vorhandene Trust Anchor Element selbst sieht aus wie folgt:
+Das bereits vorhandene Trust-Anchor-Element selbst sieht wie folgt aus:
 
 ```xml
     <de.persosim.simulator.cardobjects.TrustPointCardObject id="77">
@@ -128,9 +128,9 @@ Der Hex-Wert ist hier zur besseren Lesbarkeit auf mehrere Zeilen umbrochen. In d
 ```
 
 ## Ändern eines bestehenden Trust Points
-Das vorhandene Trust Point Element **`currentCertificate`** soll nun so abgeändert werden, dass es den Trust Point aus DECVCAeIDCT00001.bin enthält passend zu DECVCAeIDCT00001.cvcert.
-Hierfür muss der Trust Point aus DECVCAeIDCT00001.bin zuerst z.B. mit Hilfe eines Hex-Editors in eine hexadezimale Repräsentation überführt werden.
-Der hexadezimal kodierte Trust Point sieht aus wie folgt:
+Das vorhandene Trust-Point-Element **`currentCertificate`** soll nun so abgeändert werden, dass es den Trust Point aus DECVCAeIDCT00001.bin enthält, passend zu DECVCAeIDCT00001.cvcert.
+Hierfür muss der Trust Point aus DECVCAeIDCT00001.bin zuerst z. B. mit Hilfe eines Hex-Editors in eine hexadezimale Repräsentation überführt werden.
+Der hexadezimal kodierte Trust Point sieht wie folgt aus:
 
 ```text
 "308201333081EC06072A8648CE3D02013081E0020101302C06072A8648CE3D01
@@ -149,7 +149,7 @@ Der hexadezimal kodierte Trust Point sieht aus wie folgt:
 Der Hex-Wert ist hier zur besseren Lesbarkeit auf mehrere Zeilen umbrochen. In der Profildatei muss er als eine zusammenhängende Zeichenfolge ohne Zeilenumbrüche und Leerzeichen stehen.
 ```
 
-Dieser Hex-String ersetzt nun unter dem Element **`publicKey`** den alten im Sub-Element  **`value`**. Als nächstes müssen in den Sub-Elementen des Elements  **`certificateHolderReference`**  der countryCode, der holderMnemonic und die sequenceNumber angepasst werden.
+Dieser Hex-String ersetzt nun unter dem Element **`publicKey`** den alten im Sub-Element **`value`**. Als Nächstes müssen in den Sub-Elementen des Elements **`certificateHolderReference`** der countryCode, der holderMnemonic und die sequenceNumber angepasst werden.
 Gleiches gilt bei Bedarf auch für das Gültigkeitsdatum.
 
 Gültigkeitsbeginn:
@@ -166,7 +166,7 @@ Ablaufdatum:
     </certificateExpiration>).
 ```
 
-Nach erfolgreichem Abschluss aller Änderungen sieht die Personalisierung im Wesentlichen aus wie folgt:
+Nach erfolgreichem Abschluss aller Änderungen sieht die Personalisierung im Wesentlichen wie folgt aus:
 
 ```xml
     <de.persosim.simulator.perso.Profile01 id="1">
@@ -266,7 +266,7 @@ Für den Fall, dass ein Trust Point nicht geändert, sondern neu bzw. zusätzlic
 
 einfach in dieselbe Hierarchieebene kopieren und entsprechend der obigen Anleitung ändern.
 
-Die Reihenfolge, in der die Trust Points auf die Karte aufgebracht wurden, wird über den Namen des Elements festgelegt, in dem der Trust Point abgelegt wird. Als Namen stehen hierbei **`currentCertificate`** sowie **`previousCertificate`** zur Verfügung. Der zuletzt hinzugefügte Trust Point wird als Element **`currentCertificate`** abgelegt, während ein vorausgehender Trust Point als Element **`previousCertificate`** abgelegt wird. Dabei ist zu beachten, dass innerhalb eines Trust Anchors lediglich zwei Trust Points, d.h. jeweils genau ein **`currentCertificate`** sowie ein **`previousCertificate`** abgelegt werden können.
+Die Reihenfolge, in der die Trust Points auf die Karte aufgebracht wurden, wird über den Namen des Elements festgelegt, in dem der Trust Point abgelegt wird. Als Namen stehen hierbei **`currentCertificate`** sowie **`previousCertificate`** zur Verfügung. Der zuletzt hinzugefügte Trust Point wird als Element **`currentCertificate`** abgelegt, während ein vorausgehender Trust Point als Element **`previousCertificate`** abgelegt wird. Dabei ist zu beachten, dass innerhalb eines Trust Anchors lediglich zwei Trust Points, d. h. jeweils genau ein **`currentCertificate`** sowie ein **`previousCertificate`**, abgelegt werden können.
 
 ```xml
     <de.persosim.simulator.cardobjects.TrustPointCardObject id="77">
@@ -289,4 +289,4 @@ Die Reihenfolge, in der die Trust Points auf die Karte aufgebracht wurden, wird 
     </de.persosim.simulator.cardobjects.TrustPointCardObject>
 ```
 
-Um unbeabsichtigten Konflikten beim Unmarshalling zu entgehen, wird strengstens empfohlen rekursiv die **`id="continuousId" `** jedes einzelnen kopierten Tags und seiner Subtags auf laufende Werte zu setzen, die noch von keinem anderen Tag reserviert wurden. Es gilt dabei zu beachten, gültige Verweise (**`reference="continuousId"`**) auf externe Objekte unverändert zu belassen oder bei internen Objekten entsprechend der neuen Ids anzupassen.
+Um unbeabsichtigten Konflikten beim Unmarshalling zu entgehen, wird strengstens empfohlen, rekursiv die **`id="continuousId" `** jedes einzelnen kopierten Tags und seiner Subtags auf laufende Werte zu setzen, die noch von keinem anderen Tag reserviert wurden. Es gilt dabei zu beachten, gültige Verweise (**`reference="continuousId"`**) auf externe Objekte unverändert zu belassen oder bei internen Objekten entsprechend der neuen IDs anzupassen.
