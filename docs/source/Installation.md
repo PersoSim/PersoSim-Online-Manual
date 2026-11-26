@@ -36,7 +36,7 @@ Die Dateien für Windows, macOS und Linux stehen hier zum Download bereit: {{ re
 Nach dem Download einer Datei unter macOS in das Standard-Verzeichnis „Downloads“ setzt macOS für diese Datei ein Quarantäne-Flag. Sobald dieses Flag gesetzt wird, kommt beim Start von PersoSim die Fehlermeldung, dass die Datei defekt sei und in den Mülleimer verschoben werden sollte. Man kann dieses Problem umgehen, indem man die PersoSim-Datei über einen anderen Weg als den Browser herunterlädt, z. B. über wget. Oder man entfernt nach dem Download das Quarantäne-Flag mit folgendem Kommando:
 
 ```bash
-sudo xattr -r -d com.apple.quarantine /path/to/de.persosim.rcp.product-x.x.x-202xxxxxx-macosx.cocoa.x86_64.tar.gz
+sudo xattr -r -d com.apple.quarantine /path/to/de.persosim.rcp.product-x.x.x-202xxxxxx-macosx.cocoa.<Architektur>.tar.gz
 ```
 :::
 
